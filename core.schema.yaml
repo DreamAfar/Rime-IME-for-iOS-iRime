@@ -1,0 +1,53 @@
+# Rime schema
+# encoding: utf-8
+#此方案文件不可编辑
+
+schema:
+  schema_id: core
+  name: 字典
+  version: "1.0"
+  dependencies:
+
+switches:
+  - name: ascii_mode
+    reset: 0    
+    states: ["中文", "西文"]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - reverse_lookup_translator
+    - script_translator
+  filters:
+    - uniquifier
+
+speller:
+  #alphabet: zyxwvutsrqponmlkjihgfedcba
+  alphabet: 1
+
+translator:
+  dictionary: core
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
