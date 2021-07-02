@@ -1,0 +1,22 @@
+{
+  "name": "Chinese to English",
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "text",
+      "file": "Chinese_to_English.txt"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "group",
+      "dicts": [{
+        "type": "text",
+        "file": "Chinese_to_English.txt"
+      }, {
+        "type": "text",
+        "file": "Chinese_to_English.txt"
+      }]
+    }
+  }]
+}

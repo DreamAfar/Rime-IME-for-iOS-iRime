@@ -1,0 +1,19 @@
+{
+  "name": "Japanese to Emoji",
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "text",
+      "file": "emoji_Japanese.txt"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "group",
+      "dicts": [{
+        "type": "text",
+        "file": "emoji_Japanese.txt"
+      }]
+    }
+  }]
+}
