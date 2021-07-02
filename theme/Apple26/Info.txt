@@ -1,0 +1,8 @@
+Name=Imperfect 公测版（雷蛇样式）
+Style=雷蛇
+Author=淳帅二代
+SupportPlatform=SWIA
+SkinFlags=1
+SkinType=0
+Abilities=Sound
+Abilities=Sound
