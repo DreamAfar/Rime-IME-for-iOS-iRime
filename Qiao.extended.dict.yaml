@@ -1,0 +1,34 @@
+# Rime dictionary
+# encoding: utf-8
+
+---
+name: Qiao.extended
+version: "2020.12.30"
+sort: by_weight
+vocabulary: essay-zh-hans
+use_preset_vocabulary: true
+
+# clover.base 这是单字的字库，包含所有字的拼音、字频，对应文件 clover.base.dict.yaml
+# clover.phrase 这是词组的词库，包含所有基本词汇的拼音、词频，对应文件 clover.phrase.dict.yaml
+# THUOCL_* 这是清华大学开源词库，对应文件 THUOCL_*.dict.yaml
+# sogou_new_words 这是每周更新的搜狗网络流行新词，对应文件 sogou_new_words.dict.yaml
+
+# clover.base 是不可以删除的，否则四叶草方案会失去所有文字的拼音导致导入任何词库都无效。
+
+import_tables:
+  - pinyin_simp          #袖珍简体字词库
+  # - placeless_punct
+  # - clover             #四叶草的单字字库
+  # - clover.phrase        #四叶草的词组词库
+  - THUOCL_animal        #动物相关词汇
+  - THUOCL_caijing       #财经相关词汇
+  - THUOCL_car           #车相关词汇
+  - THUOCL_chengyu       #成语词汇
+  - THUOCL_diming        #地名词汇
+  - THUOCL_food          #食物词汇
+  - THUOCL_IT            #IT词汇
+  - THUOCL_law           #法律法规词汇
+  - THUOCL_lishimingren  #历史名人词汇
+  - THUOCL_medical       #医学词汇
+  - THUOCL_poem          #诗歌词汇
+  # - sogou_new_words      #搜狗的词汇
