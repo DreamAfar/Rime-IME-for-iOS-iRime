@@ -1,0 +1,45 @@
+# Rime schema
+# vim: set sw=2 sts=2 et:
+# encoding: utf-8
+
+patch:
+  # 增加切换选单
+  switches/@next:
+    name: emoji_jp
+    reset: 1
+    states: [ "😭️", "😄️" ]
+  
+  # 添加 emoji 滤镜
+  engine/filters/@next1: "simplifier@emoji_jp" 
+
+  # translators
+  # 添加 调用custom_phrase自定义短语
+  engine/translators/@next: "table_translator@custom_phrase"
+
+  # 添加 调用Rime-lua插件，自定义系统变量输出日期、星期、时间类型输出
+  engine/translators/@next1: "lua_translator@date_translator"
+
+  # 添加 简易计算器lua，按符号"="激活计算器
+  engine/translators/@next2: "lua_translator@calculator_translator"
+  recognizer/patterns/expression: "^=.*$"
+
+# 自定义短语 Custom_phrase.txt # Tab 不能用空格代替
+  custom_phrase:
+    dictionary: ""
+    user_dict: custom_phrase     #设定用户词典名
+    db_class: stabledb           #设定用户词典类型，可设 tabledb〔文本〕或 userdb〔二进制〕
+    enable_completion: false     #提前显示尚未输入完整码的字〔true 或 false〕
+    enable_sentence: false       #是否开启自动造句〔true 或 false〕
+    initial_quality: 1           #设定此翻译器结果优先级，如果想要自定义的词排在前面，这个值尽量设大一点
+  
+  #emoji表情
+  emoji_jp:
+    opencc_config: emoji_Japanese.json
+    option_name: emoji_jp
+    tips: all
+
+  "key_binder/bindings": # 设置哪些键可以翻页，需要哪个取消注释即可
+    # 自定义
+    - { when: has_menu, accept: "#", toggle: emoji_jp } # 在输入过程中，切换Emoji开关的快捷键，这里用#号切换
+    - { when: has_menu, accept: "F6", toggle: emoji_jp } # window在输入过程中，用F6快捷键，切换Emoji开关
+
