@@ -1,0 +1,196 @@
+# Trime default style settings
+# encoding: utf-8
+
+config_version: "0.9"
+name: 苹果内置五笔键盘 #方案名称
+author: 筋斗云#作者资讯
+
+#键盘高度等
+height:
+  1: &jpgd1 43.6 #符号键盘
+  2: &jpgd2 41.5 #主键盘
+  3: &jpgd3 41.5 #数字键盘
+  4: &jpgd4 12 #主键盘圆角
+  5: &jpgd5 36 #候选区高度
+  6: &jpgd6 0.5 #符号键盘行间距
+  7: &jpgd7 0.5 #符号键盘水平间距
+  8: &jpgd8 0.0 #符号键盘圆角
+  9: &jpgd9 11 #主键盘数字键盘行间距
+  10: &jpgd10 4 #主键盘数字键盘水平间距
+hide:
+  &hide true #false不显示候选窗或true显示候选窗
+
+style:
+  candidate_font: han.ttf #候选字型
+  candidate_padding: 5 #候选项内边距
+  candidate_spacing: 15 #候选间距
+  candidate_text_size: 18 #候选字号
+  candidate_use_cursor: true #高亮候选项
+  candidate_view_height: *jpgd5 #候选区高度
+  comment_height: 12 #编码提示区高度
+  comment_on_top: false #编码提示在上方或右侧
+  comment_text_size: 12 #编码提示字号
+  key_font: symbol.ttf #键盘字型
+  key_height: *jpgd2 #键高
+  key_long_text_size: 14 #长标签字号
+  key_text_size: 19 #键字号
+  key_width: 10.0 #键宽，占银幕宽的百分比
+  keyboards: [default, number, symbols] #键盘配置
+  label_text_size: 22 #标签字号
+  preview_text_size: 40 #按键提示字号
+  show_candidate: *hide #显示候选区
+  show_comment: true #显示提示区
+  show_preview: false #按键提示
+  symbol_text_size: 10 #符号字号
+  text_size: 16 #编码区字号
+  vertical_correction: -5
+  vertical_gap: *jpgd6 #键盘行距
+
+
+#键盘布局
+preset_keyboards:
+  default:
+    ascii_mode: 0
+    author: "筋斗云"
+    height: *jpgd2
+    horizontal_gap: *jpgd10
+    vertical_gap: *jpgd9
+    round_corner: *jpgd4
+    keys: 
+      - {click: q}
+      - {click: w}
+      - {click: e}
+      - {click: r}
+      - {click: t}
+      - {click: y}
+      - {click: u}
+      - {click: i}
+      - {click: o}
+      - {click: p}
+      - {width: 5}
+      - {click: a}
+      - {click: s}
+      - {click: d}
+      - {click: f}
+      - {click: g}
+      - {click: h}
+      - {click: j}
+      - {click: k}
+      - {click: l}
+      - {width: 5}
+      - {click: Shift, width: 14}
+      - {width: 1}
+      - {click: z}
+      - {click: x}
+      - {click: c}
+      - {click: v}
+      - {click: b}
+      - {click: n}
+      - {click: m}
+      - {width: 1}
+      - {click: BackSpace, width: 14}
+      - {click: number, width: 25}
+      - {click: space, width: 50}
+      - {click: Return, width: 25}
+    name: "苹果五笔24鍵"
+    width: 10
+
+  number:
+    ascii_mode: 0
+    author: "筋斗云"
+    height: *jpgd2
+    horizontal_gap: *jpgd10
+    vertical_gap: *jpgd9
+    round_corner: *jpgd4
+    keys: 
+      - {click: 1}
+      - {click: 2}
+      - {click: 3}
+      - {click: 4}
+      - {click: 5}
+      - {click: 6}
+      - {click: 7}
+      - {click: 8}
+      - {click: 9}
+      - {click: 0}
+      - {click: "-"}
+      - {click: "/"}
+      - {click: ":"}
+      - {click: ";"}
+      - {click: "("}
+      - {click: ")"}
+      - {click: "¥"}
+      - {click: "@"}
+      - {click: "〝"}
+      - {click: "〞"}
+      - {click: symbols, width: 14}
+      - {width: 3}
+      - {click: 。, width: 11}
+      - {click: ，, width: 11}
+      - {click: 、, width: 11}
+      - {click: "?", width: 11}
+      - {click: "!", width: 11}
+      - {click: ., width: 11}
+      - {width: 3}
+      - {click: BackSpace, width: 14}
+      - {click: DefaultKeyboard, width: 25}
+      - {click: space, width: 50}
+      - {click: Return, width: 25}
+    name: "苹果数字键盘"
+    width: 10
+
+  symbols:
+    ascii_mode: 0
+    author: "flypy.com"
+    height: *jpgd2
+    horizontal_gap: *jpgd10
+    vertical_gap: *jpgd9
+    round_corner: *jpgd4
+    keys: 
+      - {click: 【}
+      - {click: 】}
+      - {click: "{"}
+      - {click: "}"}
+      - {click: "#"}
+      - {click: "%"}
+      - {click: "^"}
+      - {click: "*"}
+      - {click: "+"}
+      - {click: "="}
+      - {click: "_"}
+      - {click: "-"}
+      - {click: "\\"}
+      - {click: "|"}
+      - {click: "~"}
+      - {click: "《"}
+      - {click: "》"}
+      - {click: "$"}
+      - {click: "&"}
+      - {click: "·"}
+      - {click: number, width: 14}
+      - {width: 3}
+      - {click: "…", width: 11}
+      - {click: "，", width: 11}
+      - {click: "^_^", width: 11}
+      - {click: "?", width: 11}
+      - {click: "!", width: 11}
+      - {click: "´", width: 11}
+      - {width: 3}
+      - {click: BackSpace, width: 14}
+      - {click: DefaultKeyboard, width: 25}
+      - {click: space, width: 50}
+      - {click: Return, width: 25}
+    name: "苹果符号键盘"
+    width: 10
+
+preset_keys:
+  # 编辑
+  Shift: {label: Shift, send: Shift_L}
+  Return: {label: Enter, functional: false, send: Return}
+  BackSpace: {send: BackSpace}
+  space: {label: "空格", send: space}
+  number: {label: 123, send: Eisu_toggle, select: number}
+  symbols: {label: "#+=", send: Eisu_toggle, select: symbols}
+  .symbols: {label: "符号", send: Eisu_toggle, select: .symbols}
+  .number: {label: 123, send: Eisu_toggle, select: .number}
+  DefaultKeyboard: {label: 五笔, send: Eisu_toggle, select: default}
