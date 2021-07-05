@@ -1,4 +1,4 @@
-#注意：这是一个个人的使用的iRime仓库，主要用于记录
+### 注意：这是一个个人的使用的iRime仓库，主要用于记录
 
 iRime作者的项目地址：https://github.com/jimmy54/iRime
 
