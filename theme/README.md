@@ -1,3 +1,22 @@
+# iRime的主题文件夹
+
+
+| 主题文件夹 |                      |      |
+| ---------- | -------------------- | ---- |
+| Default    | 默认键盘主题         |      |
+| Apple26    | 苹果风格键盘主题     |      |
+| Microsoft  | 微软双拼键盘主题     |      |
+| Quick5     | Quick5风格键盘主题   |      |
+| 九宫格     | 九宫格风格键盘主题   |      |
+| iPad键盘   | 苹果iPad风格键盘主题 |      |
+| 笔画       | 笔画风格键盘主题     |      |
+| Qiao       | Qiao自定义的键盘主题 |      |
+
+
+
+## theme主题文件注解
+
+~~~yaml
 # Trime default style settings
 # encoding: utf-8
 
@@ -351,3 +370,6 @@ preset_keys:
   commit，: {label: "，", commit: "，"}
   commit。: {label: "。", commit: "。"}
   commit”: {label: "”", commit: "”"}
+
+~~~
+
