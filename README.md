@@ -15,7 +15,7 @@ iRime相关资源：https://github.com/jimmy54/iRime-Resource
 
 # iRime电脑快传内容详解
 
-> 这是依据iRime第一次开启时，电脑快传所显示的内容进行解释。
+> 这是依据iRime开启时电脑快传所显示的内容进行解释。
 
 
 - 添加输入方案  
