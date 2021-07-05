@@ -1,24 +1,3 @@
-# iRime的主题文件夹
-
-
-| 主题文件夹 |                      |      |
-| ---------- | -------------------- | ---- |
-| Default    | 默认键盘主题         |      |
-| Apple26    | 苹果风格键盘主题     |      |
-| Microsoft  | 微软双拼键盘主题     |      |
-| Quick5     | Quick5风格键盘主题   |      |
-| 九宫格     | 九宫格风格键盘主题   |      |
-| iPad键盘   | 苹果iPad风格键盘主题 |      |
-| 笔画       | 笔画风格键盘主题     |      |
-| Qiao       | Qiao自定义的键盘主题 |      |
-
-
-
-
-
-## theme主题文件注解
-
-~~~yaml
 # Trime default style settings
 # encoding: utf-8
 
@@ -201,6 +180,104 @@ preset_keyboards:
       - {click: Return, width: 25}
     name: "苹果数字键盘"
     width: 10
+    
+  # 苹果数字键盘
+  number:
+    ascii_mode: 0
+    author: "筋斗云"
+    height: *jpgd2
+    horizontal_gap: *jpgd10
+    vertical_gap: *jpgd9
+    round_corner: *jpgd4
+    keys: 
+    # 第一行
+      - {click: 1}
+      - {click: 2}
+      - {click: 3}
+      - {click: 4}
+      - {click: 5}
+      - {click: 6}
+      - {click: 7}
+      - {click: 8}
+      - {click: 9}
+      - {click: 0}
+    # 第二行
+      - {click: "-"}
+      - {click: "/"}
+      - {click: ":"}
+      - {click: semicolon}
+      - {click: bracket}
+      - {click: bracket1}
+      - {click: "¥"}
+      - {click: "@"}
+      - {click: quotationMarkFull}
+      - {click: quotationMarkFull1}
+    # 第三行
+      - {click: symbols2, width: 14}
+      - {width: 3}
+      - {click: periodFull, width: 11}
+      - {click: commaFull, width: 11}
+      - {click: dunHalf, width: 11}
+      - {click: questionMark, width: 11}
+      - {click: point, width: 11}
+      - {click: periodHalf, width: 11}
+      - {width: 3}
+      - {click: BackSpace, width: 14}
+    # 第四行
+      - {click: DefaultKeyboard, width: 25}
+      - {click: Space, width: 50}
+      - {click: Return, width: 25}
+    name: "苹果数字键盘"
+    width: 10
+
+  #苹果符号键盘
+  symbols:
+    ascii_mode: 0
+    author: "筋斗云"
+    height: *jpgd2
+    horizontal_gap: *jpgd10
+    vertical_gap: *jpgd9
+    round_corner: *jpgd4
+    keys: 
+    # 第一行
+      - {click: 【}
+      - {click: 】}
+      - {click: "{"}
+      - {click: "}"}
+      - {click: "#"}
+      - {click: "%"}
+      - {click: "^"}
+      - {click: "*"}
+      - {click: "+"}
+      - {click: "="}
+    # 第二行
+      - {click: "_"}
+      - {click: "-"}
+      - {click: "\\"}
+      - {click: "|"}
+      - {click: "~"}
+      - {click: "《"}
+      - {click: "》"}
+      - {click: "$"}
+      - {click: "&"}
+      - {click: "·"}
+    # 第三行
+      - {click: .symbols, width: 14}  # 更多
+      - {width: 3}
+      - {click: "…", width: 11}
+      - {click: commaFull, width: 11}   # 全角 "，"
+      - {click: "^_^", width: 11}
+      - {click: questionMark, width: 11} # 全角 ？
+      - {click: point, width: 11}  # 全角 ！
+      - {click: "´", width: 11}
+      - {width: 3}
+      - {click: BackSpace, width: 14}
+    # 第四行
+      - {click: DefaultKeyboard, width: 25}
+      - {click: Space, width: 50}
+      - {click: Return, width: 25}
+    name: "苹果符号键盘"
+    width: 10
 
 preset_keys:
   # 键盘类型需要在这里跳转，目前只支持下面的配置。
@@ -212,20 +289,27 @@ preset_keys:
   #   其它暂时不支持,具体看事例;
   # 现在支持commit命令,直接上屏指定字符
   #
-  Shift: {label: Shift, send: Shift_L}
-  Return: {label: Enter, send: Return}
-  BackSpace: {send: BackSpace}
-  space: {label: "空格", send: space}
-  number: {label: 123, send: Eisu_toggle, select: number}
-  english: {label: "abc", send: Eisu_toggle, select: english}
-  symbols: {label: "符", send: Eisu_toggle, select: number}
+  Shift: {label: Shift, send: Shift_L}  # Shift键
+  Return: {label: Enter, send: Return}  # 回车键
+  BackSpace: {send: BackSpace}  # 退格键
+  space: {label: "空格", send: space}  # 空格键
+  number: {label: 123, send: Eisu_toggle, select: number}    #苹果数字、符号键盘
+  english: {label: "abc", send: Eisu_toggle, select: english}    #英文键盘
+  symbols: {label: "符", send: Eisu_toggle, select: number}   # 苹果符号键盘
   .symbols: {label: "更多", send: Eisu_toggle, select: .symbols} #默认的符号键盘
   .symbols1: {label: "更多", text: "{.symbols}{DefaultKeyboard}"} #默认的符号键盘
   .number: {label: 123, send: Eisu_toggle, select: .number} #默认的9宫格数据键盘
-  DefaultKeyboard: {label: 中, send: Eisu_toggle, select: default}
-  DefaultKeyboard2: {label: 中, send: Eisu_toggle, select: default}
+  DefaultKeyboard: {label: 中, send: Eisu_toggle, select: default}  #Default默认键盘
+  DefaultKeyboard2: {label: 中, send: Eisu_toggle, select: default}  #Default默认键盘
+  
+  # 现在text的命令只支持:
+  #   1,Left(光标向左移动一格);
+  #   2,Right(光标向右移动一格)
+  #   3,跳转到指定键盘;
+  #   其它暂时不支持,具体看事例;
+  
   periodHalf: {label: ".", commit: "."} #直接上屏半角句号
-  periodFull: {label: "。", text: "。{DefaultKeyboard}"} #上屏全角句号再跳转到default键盘
+  periodFull: {label: "。", text: "。{DefaultKeyboard}"} #上屏全角句号后，再跳转到default键盘
   commaHalf: {label: ",", commit: ","}
   commaFull: {label: "，", text: "，{DefaultKeyboard}"}
   dunHalf: {label: "、", text: "、{DefaultKeyboard}"}
@@ -267,6 +351,3 @@ preset_keys:
   commit，: {label: "，", commit: "，"}
   commit。: {label: "。", commit: "。"}
   commit”: {label: "”", commit: "”"}
-
-~~~
-
