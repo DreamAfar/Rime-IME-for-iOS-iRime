@@ -1,6 +1,6 @@
 
 
-### 注意：这是一个个人的使用的iRime仓库，主要用于记录
+### 注意：这是一个个人的使用的iRime仓库，主要用于记录保存方案文件等
 
 iRime作者的项目地址：https://github.com/jimmy54/iRime
 
@@ -8,24 +8,27 @@ iRime相关资源：https://github.com/jimmy54/iRime-Resource
 
 # iRime輸入法-   基于Rime输入法框架开发的iOS端Rime输入法
 
+iRime的方案配置文件和PC端的小狼毫、Mac端鼠须管、安卓端的同文Trime的方案配置文件兼容通用
+
 基於著名的【Rime】輸入法框架，
 旨在保護漢語各地方言，
 音碼形碼通用輸入法平臺。
 
+
 - [点击到AppStore下载](https://itunes.apple.com/cn/app/irime输入法/id1142623977?mt=8)
 
-**iRime的设置界面**                                                                     **常规设置界面**
+**iRime的键盘界面（自定义后的）**
 
-<img src="assets/2022-02-23 11.37.01.png" alt="2022-02-23 11.37.01" style="zoom: 25%;" /> <img src="assets/2022-02-23 11.45.20.jpeg" alt="2022-02-23 11.45.20" style="zoom: 25%;" /> 
+<img src="assets/2022-02-23 13.08.24.jpeg" alt="2022-02-23 11.37.01" width="300px" />
 
-**高级设置界面**                                                      **文件管理器界面**（手机上管理Rime的文件）
-<img src="assets/2022-02-23 11.38.55.jpeg" alt="2022-02-23 11.38.55" style="zoom: 25%;" /> <img src="assets/2022-02-23 11.41.35.png" alt="2022-02-23 11.41.35" style="zoom: 25%;" />
+**iRime的设置界面常规设置界面------------------------------高级设置界面-**
+
+<img src="assets/2022-02-23 11.37.01.png" alt="2022-02-23 11.37.01" width="300px" /> <img src="assets/2022-02-23 11.45.20.jpeg" alt="2022-02-23 11.45.20" width="300px" /> <img src="assets/2022-02-23 11.38.55.jpeg" alt="2022-02-23 11.38.55" width="300px" />
 
 
+**文件管理器界面（手机上管理Rime的文件）---电脑快传界面（打开网页上传下载文件管理）-----------键盘主题选择界面**
 
-电脑快传界面（打开网页上传下载文件管理）    键盘主题选择界面
-
-<img src="assets/2022-02-23 11.41.57.png" alt="2022-02-23 11.41.57" style="zoom:25%;" />  <img src="assets/2022-02-23 11.41.20.png" alt="2022-02-23 11.41.20" style="zoom:25%;" />
+<img src="assets/2022-02-23 11.41.35.png" alt="2022-02-23 11.41.35" width="300px" /> <img src="assets/2022-02-23 11.41.57.png" alt="2022-02-23 11.41.57" width="300px" />  <img src="assets/2022-02-23 11.41.20.png" alt="2022-02-23 11.41.20" width="300px" />
 
 
 
