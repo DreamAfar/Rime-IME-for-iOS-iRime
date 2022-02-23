@@ -1,3 +1,5 @@
+
+
 ### 注意：这是一个个人的使用的iRime仓库，主要用于记录
 
 iRime作者的项目地址：https://github.com/jimmy54/iRime
@@ -11,6 +13,21 @@ iRime相关资源：https://github.com/jimmy54/iRime-Resource
 音碼形碼通用輸入法平臺。
 
 - [点击到AppStore下载](https://itunes.apple.com/cn/app/irime输入法/id1142623977?mt=8)
+
+**iRime的设置界面**                                                                     **常规设置界面**
+
+<img src="assets/2022-02-23 11.37.01.png" alt="2022-02-23 11.37.01" style="zoom: 25%;" /> <img src="assets/2022-02-23 11.45.20.jpeg" alt="2022-02-23 11.45.20" style="zoom: 25%;" /> 
+
+**高级设置界面**                                                      **文件管理器界面**（手机上管理Rime的文件）
+<img src="assets/2022-02-23 11.38.55.jpeg" alt="2022-02-23 11.38.55" style="zoom: 25%;" /> <img src="assets/2022-02-23 11.41.35.png" alt="2022-02-23 11.41.35" style="zoom: 25%;" />
+
+
+
+电脑快传界面（打开网页上传下载文件管理）    键盘主题选择界面
+
+<img src="assets/2022-02-23 11.41.57.png" alt="2022-02-23 11.41.57" style="zoom:25%;" />  <img src="assets/2022-02-23 11.41.20.png" alt="2022-02-23 11.41.20" style="zoom:25%;" />
+
+
 
 
 # iRime电脑快传内容详解
@@ -26,6 +43,8 @@ iRime相关资源：https://github.com/jimmy54/iRime-Resource
 
 `附表1: （iRime 文件分布、作用及相关教程`  
 
+
+
 | 文件&文件夹                                                  | 作用及相关教程                                               |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | :file_folder:`<词典名>.userdb`                               | <u>用户词典</u>：存储用户输入习惯。                          |
@@ -34,6 +53,7 @@ iRime相关资源：https://github.com/jimmy54/iRime-Resource
 | :file_folder:`theme`                                         | <u>键盘主题文件夹</u>：用于改变键盘界面。将个性化自定义的键盘主题存放于此文件夹中。 |
 | :file_folder:`opencc`                                        | <u>简繁转换组件(可选)</u>：简繁转换。【原理及示例】【】      |
 | :file_folder:`sync`                                          | <u>同步文件夹</u>：备份方案&词库及相关配置文件，导出的用户词典也存放在此处。详见【同步用户资料】【】。 |
+| :file_folder:`guide`                                         | 教程相关文件                                                 |
 | -------------------                                          | ------------------------------------------------------------ |
 | :page_facing_up:`custom_phrase.txt`                          | <u>自定义短语(可选)</u>：存储少量的固定短语等数据。配置步骤：①【新建短语翻译器】【】 ②【配置翻译器】【】 ③往custom_phrase.txt添加自定义短语 （【custom_phrase样例文件】【】 *） |
 | :page_facing_up:`default.yaml`                               | <u>全局设定文件</u>：Rime各个平台通用的**全局参数** (功能键定义、按键捆绑、方案列表、候选条数……)。请参考【定制指南】【】 |
@@ -57,32 +77,32 @@ iRime相关资源：https://github.com/jimmy54/iRime-Resource
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 【常用输入方案】:https://github.com/rime/plum/blob/master/README.md#packages
- 
+
 【更多开源输入方案】:https://github.com/osfans/rime-tool
- 
+
 【Rime说明书】:https://github.com/rime/home/wiki/UserGuide
- 
+
 
 【原理及示例】:https://github.com/rime/home/wiki/CustomizationGuide/0dd06383528e7794013815c1b12c32ec8647ef56#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E7%B0%A1%E5%8C%96%E5%AD%97%E8%BC%B8%E5%87%BA
-  
+
 【同步用户资料】:https://github.com/rime/home/wiki/UserGuide#同步用戶資料
-  
+
 【配置翻译器】:https://github.com/rime/rime-luna-pinyin/blob/master/luna_pinyin.schema.yaml#L81-L87
-  
+
 【新建短语翻译器】:https://github.com/rime/rime-luna-pinyin/blob/master/luna_pinyin.schema.yaml#L49
-  
+
 【custom_phrase样例文件】:https://gist.github.com/lotem/5440677
-  
+
 【定制指南】:https://github.com/rime/home/wiki/CustomizationGuide#定製指南
-  
+
 【八股文的详细说明】:https://github.com/rime/home/wiki/RimeWithSchemata#八股文
-  
+
 【详解输入方案】:https://github.com/rime/home/wiki/RimeWithSchemata#詳解輸入方案
-  
+
 【`schema.yaml`详解】:https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md#schemayaml-詳解
-  
+
 【码表与词典】:https://github.com/rime/home/wiki/RimeWithSchemata#碼表與詞典
-  
+
 【`dict.yaml`详解】:https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md#dictyaml-詳解
-  
+
 【symbols.yaml用法说明】:https://github.com/rime/rime-prelude/blob/master/symbols.yaml#L4-L10
