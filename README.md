@@ -8,18 +8,16 @@ iRime相关资源：https://github.com/jimmy54/iRime-Resource
 
 # iRime輸入法-   基于Rime输入法框架开发的iOS端Rime输入法
 
-iRime的方案配置文件和PC端的小狼毫、Mac端鼠须管、安卓端的同文Trime的方案配置文件兼容通用
+iRime的方案配置文件和PC端的小狼毫、Mac端的鼠须管、安卓端的同文(Trime)的方案配置文件兼容通用
 
-基於著名的【Rime】輸入法框架，
-旨在保護漢語各地方言，
-音碼形碼通用輸入法平臺。
+基於著名的【Rime】輸入法框架，旨在保護漢語各地方言，音碼形碼通用輸入法平臺。
 
 
 - [点击到AppStore下载](https://itunes.apple.com/cn/app/irime输入法/id1142623977?mt=8)
 
 **iRime的键盘界面（自定义后的）**
 
-<img src="assets/2022-02-23 13.08.24.jpeg" alt="2022-02-23 11.37.01" width="200px" />
+<img src="assets/2022-02-23 13.08.24.jpeg" alt="2022-02-23 11.37.01" width="500px" />
 
 **iRime的设置界面---------------------------常规设置界面------------------------------高级设置界面-**
 
