@@ -1,0 +1,18 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# 挂载 melt_eng 方案的词库
+#
+---
+name: easy_en.extended
+version: "1"
+sort: by_weight
+# vocabulary: essay-zh-hans
+
+import_tables:
+  # - en     # 原装词库
+  # - easy_en     # 原装词库
+  - easy_en_ext # 自己补充的词库
+  - easy_en_cn  # 中英混输词库
+  - easy_en_cn2
+  - easy_en_user

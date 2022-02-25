@@ -1,0 +1,135 @@
+# Rime schema
+# vim: set sw=2 sts=2 et:
+# encoding: utf-8
+
+schema:
+  schema_id: japanese
+  name: 日本語入力
+  version: 'v0.2'
+  author:
+    - ensigma96 <ensigma96@gmail.com>
+  dependencies:
+    # - jpmk
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 日语, 英文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  # - name: simplification
+  #   states: [ 漢字, 汉字 ]
+  #- options: [jp_variants, zh_simp, zh_tw ]
+  #- options: [zh_simp, zh_tw ]
+  #  reset: 0
+  #  states:
+  #    #- 字形 → 日本
+  #    - 字形 → 大陸
+  #    - 字形 → 台灣
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    # - reverse_lookup_translator
+    # - table_translator@jpmk         # 添加 调用jpmk扩展词库
+  filters:
+    # - simplifier
+    #- simplifier@jp_variants
+    #- simplifier@zh_simp
+    #- simplifier@zh_tw
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba:,.!()/-=_+    #'zyxwvutsrqponmlkjihgfedcba-_'
+  delimiter: " '"  #"，"逗号分词
+  algebra:
+    - derive/_/x/
+    - derive/-/q/
+    # 根据需要删除规则
+    # - derive/i_e/ye/
+    # - derive/fu/hu/
+    - derive/nn$/n/      # nn = n
+
+    - derive/sya/sha/      #
+    - derive/syu/shu/      #
+    - derive/syo/sho/      #
+
+    - derive/tya/cho/      #
+    - derive/tyu/chu/      #
+    - derive/tyo/cho/      #
+
+    - derive/zya/ja/      #
+    - derive/zyu/ju/      #
+    - derive/zyo/jo/      #
+
+
+translator:
+  dictionary: japanese
+  spelling_hints: 5
+  comment_format:
+    - 'xlit|q|ー|'
+  preedit_format:
+    - 'xlit|q|ー|'
+
+jpmk:
+  # __include: /translator
+  dictionary: jpmk
+  enable_completion: false      # 是否启用英文输入联想补全（编码提示）
+  enable_sentence: false        # 是否开启自动造句〔true 或 false〕
+  initial_quality: -999     # 调整用户词和系统词重码居后，数值越大，单词出现的就越靠前。
+
+
+# simplifier:
+#  option_name: jp_variants
+#  opencc_config: jp_t2s.json
+
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"
+
+#zh_jp:
+#  option_name: zh_jp
+#  opencc_config: jp_t2s.json
+#  #tips: all
+#  tips: none
+
+# zh_simp:
+#   option_name: zh_simp
+#   opencc_config: t2s.json
+#   tips: none
+
+# zh_tw:
+#   option_name: zh_tw
+#   opencc_config: t2tw.json
+#   tips: none
+
+# jp_variants:
+#   option_name: jp_variants
+#   opencc_config: jp_t2s.json
+#   tips: none

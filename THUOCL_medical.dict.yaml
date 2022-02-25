@@ -1,7 +1,7 @@
 name: THUOCL_medical
 version: "1"
 sort: by_weight
-
+vocabulary: essay-zh-hans
 ...
 精神	jing shen	606946
 医院	yi yuan	580436

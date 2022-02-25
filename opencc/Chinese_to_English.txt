@@ -5447,6 +5447,7 @@ X射线	X射线 Xray
 米饭	米饭 rice
 骑马	骑马 ride
 恰恰	恰恰 right
+推特	推特 Twitter
 对的	对的 right
 铃声	铃声 ring
 铃响	铃响 ring

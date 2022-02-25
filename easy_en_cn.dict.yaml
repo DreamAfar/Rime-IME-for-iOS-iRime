@@ -1,0 +1,148 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# https://github.com/iDvel/rime-settings/
+#
+# 中英混输词库
+#
+---
+name: easy_en_cn
+version: "2021-11-20"
+sort: by_weight
+# vocabulary: essay-zh-hans
+...
+AD 钙奶	adgainai
+UU 加速器	uujiasuqi
+Cinity 厅	Cinity
+Cinity 厅	Cinityting
+Eul 的神圣法杖	eul
+Eul 的神圣法杖	eul de shen sheng fa zhang
+A 杖	azhang
+红 Buff	hongbuff
+蓝 Buff	lanbuff
+老 Baby	laobaby
+小 Baby	xiaobaby
+艾 AA	aiaa
+炒 CP	chaocp
+嗑 CP	kecp
+U 盘	youpan
+U 盘	upan
+B 站	bzhan
+V 站	vzhan
+P 站	pzhan
+大 V	dav
+QQ 音乐	qqyinyue
+QQ 拼音	qqpinyin
+QQ 会员	qqhuiyuan
+QQ 输入法	qqshurufa
+Dock 栏	docklan
+阿 Q 精神	aqjingshen
+Win 版	winban
+Windows 版	windowsban
+Mac 版	macban
+macOS 版	macosban
+Web 版	webban
+PC 端	pcduan
+Win 端	winduan
+Mac 端	macduan
+Web 端	webduan
+iOS 端	iosduan
+e 招贷	ezhaodai
+G 胖	gpang
+Up 主	upzhu
+BOSS 直聘	bosszhipin
+P 社	pshe
+V 社	vshe
+Go 语言	goyuyan
+维生素 A	weishengsua
+维生素 B	weishengsub
+维生素 C	weishengsuc
+维生素 D	weishengsud
+维生素 E	weishengsue
+维生素 K	weishengsuk
+维 E 乳	weieru
+维生素 E 乳	weishengsueru
+阿 Q	aq	100
+阿 Q 正传	aqzhengzhuan	100
+单边 z 变换	danbianzbianhuan	100
+逗 B	doub	100
+逗 B	doubi	100
+哆啦 A 梦	duolaameng	100
+二 B	erb	100
+二 B	erbi	100
+卡拉 OK	kalaok	100
+牛 B	niub	100
+牛 B	niubi	100
+三 K 党	sankdang	100
+三 K 党	sankeidang	100
+傻 B	shab	100
+傻 B	shabi	100
+傻 X	shax
+智能 ABC	zhinengabc	100
+装 B	zhuangb	100
+装 B	zhuangbi	100
+A 股	agu	100
+A 盘	apan	100
+A 片	apian	100
+AA 制	aazhi	100
+ATM 机	atmji
+B 超	bchao	100
+B 股	bgu	100
+B 淋巴细胞	blinbaxibao	100
+B 盘	bpan	100
+B 细胞	bxibao	100
+C 盘	cpan	100
+C 语言	cyuyan	100
+D 盘	dpan	100
+E 盘	epan	100
+F 盘	fpan	100
+G 点	gdian	100
+G 盘	gpan	100
+H 股	hgu	100
+H 盘	hpan	100
+I 盘	ipan	100
+IP 地址	ipdizhi	100
+IP 电话	ipdianhua	100
+IP 卡	ipka	100
+IP 地址	ipweizhi	100
+J 盘	jpan	100
+K 宝	kbao	100
+K 宝	keibao	100
+K 粉	kfen	100
+K 粉	keifen	100
+K 歌	kge	100
+K 歌	keige	100
+POS 机	posji	100
+Q 币	qbi	100
+QQ	qq	100
+QQ 号	qqhao	100
+QQ 号码	qqhaoma	100
+QQ 会员	qqhuiyuan	100
+QQ 空间	qqkongjian	100
+QQ 群	qqqun	100
+QQ 邮箱	qqyouxiang	100
+SIM 卡	simka	100
+T 淋巴细胞	tlinbaxibao	100
+T 细胞	txibao	100
+T 型台	txingtai	100
+T 恤	txu	100
+T 恤衫	txushan	100
+U 盾	udun	100
+U 形管	uxingguan	100
+UIM 卡	uimka	100
+USIM 卡	usimka	100
+X 刀	xdao	100
+X 光	xguang	100
+X 染色体	xranseti	100
+X 射线	xshexian	100
+Y 染色体	yranseti	100
+z 变换	zbianhuan	100
+z 逆变换	znibianhuan	100
+α 粒子	aerfalizi	100
+α 射线	aerfashexian	100
+β 粒子	beitalizi	100
+β 射线	beitashexian	100
+γ 刀	gamadao	100
+γ 射线	gamashexian	100
+D 之国	dzhiguo
+D 之一族	dzhiyizu

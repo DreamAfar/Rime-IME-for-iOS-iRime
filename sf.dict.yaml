@@ -1,0 +1,123 @@
+---
+name: sf
+version: "1.0"
+sort: original
+columns:
+  - text
+  - code
+  - weight
+  - stem
+encoder:
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaAbBaCa"
+    - length_in_range: [4, 10]
+      formula: "AaBaCaZa"
+...
+不能	b'
+不过	b,
+北京	b.
+必须	b/
+不是	b;
+才能	c'
+出来	c,
+成为	c.
+查看	c/
+此时	c;
+到了	d'
+第一	d,
+地方	d.
+当然	d/
+但是	d;
+发展	f'
+发现	f,
+方法	f.
+发生	f/
+非常	f;
+更加	g'
+过去	g,
+国家	g.
+工作	g/
+共同	g;
+孩子	h'
+还有	h,
+会议	h.
+忽然	h/
+还是	h;
+继续	j'
+今天	j,
+经济	j.
+进行	j/
+就是	j;
+可以	k'
+看到	k,
+科学	k.
+看看	k/
+可是	k;
+领导	l'
+离开	l,
+立刻	l.
+老人	l/
+历史	l;
+面对	m'
+没有	m,
+目前	m.
+明白	m/
+美国	m;
+能力	n'
+那样	n,
+难道	n.
+你们	n/
+那些	n;
+旁边	p'
+朋友	p,
+漂亮	p.
+脾气	p/
+贫困	p;
+妻子	q'
+起来	q,
+情况	q.
+其他	q/
+企业	q;
+人民	r'
+然而	r,
+认为	r.
+如何	r/
+如果	r;
+所以	s'
+市场	s,
+说道	s.
+什么	s/
+世界	s;
+提出	t'
+通过	t,
+提高	t.
+他们	t/
+同时	t;
+儿子	v'
+安排	v,
+欧洲	v.
+爱人	v/
+而且	v;
+为了	w'
+完成	w,
+无法	w.
+我们	w/
+问题	w;
+系统	x'
+现在	x,
+希望	x.
+先生	x/
+心中	x;
+已经	y'
+一样	y,
+因为	y.
+一个	y/
+一点	y;
+自己	z'
+这样	z,
+知道	z.
+这个	z/
+中国	z;

@@ -1,15 +1,22 @@
 # encoding: utf-8
 # vim: set noet:
 
+# Mostly based on the Hepburn romanization system
+# 主要基于赫本罗马化系统 
+
+# 排序
+# Small forms
+# Gojuuon 五十音
+# Youon 拗音
+# Sokuon 促音
+# Youon with sokuon
+
 ---
 name: japanese.kana
 version: 'v0.2-20180411'
 sort: by_weight
 ...
 
-# Mostly based on the Hepburn romanization system
-
-# Small forms
 ぁ	_a
 ぃ	_i
 ぅ	_u
@@ -36,43 +43,27 @@ sort: by_weight
 ヶ	_ke
 ッ	_tsu
 
-# Gojuuon 五十音
+
 あ	a
 い	i
 う	u
 え	e
 お	o
-ゔ	vu
 か	ka
 き	ki
 く	ku
 け	ke
 こ	ko
-が	ga
-ぎ	gi
-ぐ	gu
-げ	ge
-ご	go
 さ	sa
 し	shi
 す	su
 せ	se
 そ	so
-ざ	za
-じ	ji
-ず	zu
-ぜ	ze
-ぞ	zo
 た	ta
 ち	chi
 つ	tsu
 て	te
 と	to
-だ	da
-ぢ	ji
-づ	zu
-で	de
-ど	do
 な	na
 に	ni
 ぬ	nu
@@ -83,16 +74,6 @@ sort: by_weight
 ふ	fu
 へ	he
 ほ	ho
-ば	ba
-び	bi
-ぶ	bu
-べ	be
-ぼ	bo
-ぱ	pa
-ぴ	pi
-ぷ	pu
-ぺ	pe
-ぽ	po
 ま	ma
 み	mi
 む	mu
@@ -117,37 +98,21 @@ sort: by_weight
 ウ	u
 エ	e
 オ	o
-ヴ	vu
 カ	ka
 キ	ki
 ク	ku
 ケ	ke
 コ	ko
-ガ	ga
-ギ	gi
-グ	gu
-ゲ	ge
-ゴ	go
 サ	sa
 シ	shi
 ス	su
 セ	se
 ソ	so
-ザ	za
-ジ	ji
-ズ	zu
-ゼ	ze
-ゾ	zo
 タ	ta
 チ	chi
 ツ	tsu
 テ	te
 ト	to
-ダ	da
-ヂ	ji
-ヅ	zu
-デ	de
-ド	do
 ナ	na
 ニ	ni
 ヌ	nu
@@ -158,16 +123,6 @@ sort: by_weight
 フ	fu
 ヘ	he
 ホ	ho
-バ	ba
-ビ	bi
-ブ	bu
-ベ	be
-ボ	bo
-パ	pa
-ピ	pi
-プ	pu
-ペ	pe
-ポ	po
 マ	ma
 ミ	mi
 ム	mu
@@ -187,7 +142,129 @@ sort: by_weight
 ヲ	wo
 ン	n
 
-# Youon 拗音
+ゔ	vu
+ヴ	vu
+
+が	ga
+ぎ	gi
+ぐ	gu
+げ	ge
+ご	go
+ざ	za
+じ	ji
+ず	zu
+ぜ	ze
+ぞ	zo
+だ	da
+ぢ	ji
+づ	zu
+で	de
+ど	do
+ば	ba
+び	bi
+ぶ	bu
+べ	be
+ぼ	bo
+ぱ	pa
+ぴ	pi
+ぷ	pu
+ぺ	pe
+ぽ	po
+
+ガ	ga
+ギ	gi
+グ	gu
+ゲ	ge
+ゴ	go
+ザ	za
+ジ	ji
+ズ	zu
+ゼ	ze
+ゾ	zo
+ダ	da
+ヂ	ji
+ヅ	zu
+デ	de
+ド	do
+バ	ba
+ビ	bi
+ブ	bu
+ベ	be
+ボ	bo
+パ	pa
+ピ	pi
+プ	pu
+ペ	pe
+ポ	po
+
+きゃ	kya
+きゅ	kyu
+きょ	kyo
+ぎゃ	gya
+ぎゅ	gyu
+ぎょ	gyo
+しゃ	sha
+しゅ	shu
+しょ	sho
+じゃ	ja
+じゅ	ju
+じょ	jo
+ちゃ	cha
+ちゅ	chu
+ちょ	cho
+にゃ	nya
+にゅ	nyu
+にょ	nyo
+ひゃ	hya
+ひゅ	hyu
+ひょ	hyo
+びゃ	bya
+びゅ	byu
+びょ	byo
+ぴゃ	pya
+ぴゅ	pyu
+ぴょ	pyo
+みゃ	mya
+みゅ	myu
+みょ	myo
+りゃ	rya
+りゅ	ryu
+りょ	ryo
+
+キャ	kya
+キュ	kyu
+キョ	kyo
+ギャ	gya
+ギュ	gyu
+ギョ	gyo
+シャ	sha
+シュ	shu
+ショ	sho
+ジャ	ja
+ジュ	ju
+ジョ	jo
+チャ	cha
+チュ	chu
+チョ	cho
+ニャ	nya
+ニュ	nyu
+ニョ	nyo
+ヒャ	hya
+ヒュ	hyu
+ヒョ	hyo
+ビャ	bya
+ビュ	byu
+ビョ	byo
+ピャ	pya
+ピュ	pyu
+ピョ	pyo
+ミャ	mya
+ミュ	myu
+ミョ	myo
+リャ	rya
+リュ	ryu
+リョ	ryo
+
 うぁ	wha
 うぃ	whi
 うぇ	whe
@@ -199,36 +276,21 @@ sort: by_weight
 ゔゃ	vya
 ゔゅ	vyu
 ゔょ	vyo
-きゃ	kya
-きゅ	kyu
-きょ	kyo
 くぁ	kwa
 くぃ	kwi
 くぇ	kwe
 くぉ	kwo
 くゎ	kwa
-ぎゃ	gya
-ぎゅ	gyu
-ぎょ	gyo
 ぐぁ	gwa
 ぐぃ	gwi
 ぐぇ	gwe
 ぐぉ	gwo
 ぐゎ	gwa
 しぇ	she
-しゃ	sha
-しゅ	shu
-しょ	sho
 すぃ	si
 じぇ	je
-じゃ	ja
-じゅ	ju
-じょ	jo
 ずぃ	zi
 ちぇ	che
-ちゃ	cha
-ちゅ	chu
-ちょ	cho
 つぁ	tsa
 つぃ	tsi
 つぇ	tse
@@ -247,12 +309,6 @@ sort: by_weight
 でゅ	dyu
 でょ	dyo
 どぅ	du
-にゃ	nya
-にゅ	nyu
-にょ	nyo
-ひゃ	hya
-ひゅ	hyu
-ひょ	hyo
 ふぁ	fa
 ふぃ	fi
 ふぇ	fe
@@ -261,19 +317,6 @@ sort: by_weight
 ふゅ	fyu
 ふょ	fyo
 ほぅ	hu
-びゃ	bya
-びゅ	byu
-びょ	byo
-ぴゃ	pya
-ぴゅ	pyu
-ぴょ	pyo
-みゃ	mya
-みゅ	myu
-みょ	myo
-りゃ	rya
-りゅ	ryu
-りょ	ryo
-
 ウァ	wha
 ウィ	whi
 ウェ	whe
@@ -285,36 +328,21 @@ sort: by_weight
 ヴャ	vya
 ヴュ	vyu
 ヴョ	vyo
-キャ	kya
-キュ	kyu
-キョ	kyo
 クァ	kwa
 クィ	kwi
 クェ	kwe
 クォ	kwo
 クヮ	kwa
-ギャ	gya
-ギュ	gyu
-ギョ	gyo
 グァ	gwa
 グィ	gwi
 グェ	gwe
 グォ	gwo
 グヮ	gwa
 シェ	she
-シャ	sha
-シュ	shu
-ショ	sho
 スィ	si
 ジェ	je
-ジャ	ja
-ジュ	ju
-ジョ	jo
 ズィ	zi
 チェ	che
-チャ	cha
-チュ	chu
-チョ	cho
 ツァ	tsa
 ツィ	tsi
 ツェ	tse
@@ -333,12 +361,6 @@ sort: by_weight
 デュ	dyu
 デョ	dyo
 ドゥ	du
-ニャ	nya
-ニュ	nyu
-ニョ	nyo
-ヒャ	hya
-ヒュ	hyu
-ヒョ	hyo
 ファ	fa
 フィ	fi
 フェ	fe
@@ -347,20 +369,8 @@ sort: by_weight
 フュ	fyu
 フョ	fyo
 ホゥ	hu
-ビャ	bya
-ビュ	byu
-ビョ	byo
-ピャ	pya
-ピュ	pyu
-ピョ	pyo
-ミャ	mya
-ミュ	myu
-ミョ	myo
-リャ	rya
-リュ	ryu
-リョ	ryo
 
-# Sokuon 促音
+
 っゔ	vvu
 っか	kka
 っき	kki
@@ -465,7 +475,6 @@ sort: by_weight
 ッレ	rre
 ッロ	rro
 
-# Youon with sokuon
 っゔぁ	vva
 っゔぃ	vvi
 っゔぇ	vve
@@ -617,4 +626,3 @@ sort: by_weight
 ッリャ	rrya
 ッリュ	rryu
 ッリョ	rryo
-

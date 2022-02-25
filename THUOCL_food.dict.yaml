@@ -1,7 +1,8 @@
+# 「海鲜匹萨」→「海鲜比萨」
 name: THUOCL_food
 version: "1"
 sort: by_weight
-
+vocabulary: essay-zh-hans
 ...
 土豆	tu dou	1777511
 苹果	ping guo	1143881
@@ -5666,7 +5667,8 @@ sort: by_weight
 李大同双炊糕	li da tong shuang chui gao	12
 雪花豆腐羹	xue hua dou fu geng	12
 酱瓜丝儿	jiang gua si er	12
-海鲜匹萨	hai xian pi sa	12
+海鲜比萨	hai xian bi sa	12
+海鲜比萨	hai xian pi sa	12
 姜汁热味鸡	jiang zhi re wei ji	12
 家常炒面	jia chang chao mian	12
 雪山蛋糕	xue shan dan gao	12

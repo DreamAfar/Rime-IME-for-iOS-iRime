@@ -1,3 +1,4 @@
+-- 以词定字
 -- http://lua-users.org/lists/lua-l/2014-04/msg00590.html
 local function utf8_sub(s, i, j)
    i = i or 1

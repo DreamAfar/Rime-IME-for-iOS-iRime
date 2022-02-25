@@ -1,0 +1,22 @@
+---
+name: sbzdy
+version: "1.0"
+sort: original
+columns:
+  - text
+  - code
+  - weight
+  - stem
+encoder:
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaAbBaCa"
+    - length_in_range: [4, 10]
+      formula: "AaBaCaZa"
+...
+sbxlm.gitee.io/about	sb
+445906697	sbqq
+dummy@qq.com	yx
+自定义用户词组	zdc

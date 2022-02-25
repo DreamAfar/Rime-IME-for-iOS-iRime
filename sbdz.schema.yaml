@@ -1,0 +1,183 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: sbdz
+  name: "声笔拼音"
+  version: "9.5"
+  author:
+    - 戴石麟 <https://sbxlm.github.io>
+  dependencies:
+    - sbpy #拼音反查
+    - bihua #笔画反查
+    - sbzdy #自定义词典
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+  - name: full_shape
+    reset: 0
+  - name: zh_trad
+    reset: 0
+    states: [ 简体, 繁體 ]
+  - name: auto_inline
+    reset: 1
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@sbzdy
+    - affix_segmentor@bihua_lookup
+    - affix_segmentor@pinyin_lookup
+    - affix_segmentor@zhlf_lookup
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - lua_translator@date_translator
+    - lua_translator@time_translator
+    - lua_translator@number_translator
+    - table_translator@sbzdy
+    - table_translator@gdz
+    - table_translator@bihua_lookup
+    - script_translator@pinyin_lookup
+    - script_translator@zhlf_lookup
+  filters:
+    - reverse_lookup_filter@bihua_reverse_lookup
+    - reverse_lookup_filter@pinyin_reverse_lookup
+    - reverse_lookup_filter@zhlf_reverse_lookup
+    - uniquifier
+
+speller:
+  alphabet: "qwertasdfgzxcvbyuiophjklnm"
+  initials: "qwrtsdfgzxcvbyphjklnm"
+  algebra:
+    - "fuzz/^(\\w).+$/$1/"
+    - "fuzz/^(\\w)(\\w).+$/$1$2/"
+    - "fuzz/^(\\w)(\\w)(\\w).+$/$1$2$3/"
+    - "fuzz/^(\\w)(\\w)(\\w)(\\w).+$/$1$2$3$4/"
+    - "fuzz/^(\\w)(\\w)(\\w)(\\w)(\\w).+$/$1$2$3$4$5/"
+ 
+translator:
+  dictionary: sbdz
+
+sbzdy:
+  tag: sbzdy
+  dictionary: sbzdy
+  enable_user_dict: false
+  enable_encoder: false
+  enable_sentence: false
+  strict_spelling: true
+  enable_completion: true
+  encode_commit_history: false
+  prefix: "u"
+  tips: "〔自定义〕"
+
+gdz:
+  dictionary: sbpygdz
+  enable_user_dict: false
+  enable_encoder: false
+  enable_sentence: false
+  enable_compeltion: false
+  strict_spelling: true
+  initial_quality: 1000
+  
+bihua_lookup:
+  tag: bihua_lookup
+  dictionary: bihua
+  enable_user_dict: false
+  enable_encoder: false
+  enable_sentence: false
+  strict_spelling: true
+  enable_completion: true
+  encode_commit_history: false
+  tips: "〔笔画反查〕"
+
+bihua_reverse_lookup:
+  tags: [ bihua_lookup ] 
+  overwrite_comment: true
+  dictionary: sbdz
+  
+pinyin_lookup:
+  tag: pinyin_lookup
+  dictionary: sbpy
+  enable_user_dict: false
+  enable_encoder: false
+  enable_sentence: false
+  strict_spelling: true
+  enable_completion: true
+  encode_commit_history: false
+  prefix: "a"
+  tips: "〔拼音反查〕"
+
+pinyin_reverse_lookup:
+  tags: [ pinyin_lookup ] 
+  overwrite_comment: true
+  dictionary: sbdz
+    
+zhlf_lookup:
+  tag: zhlf_lookup
+  dictionary: zhlf
+  enable_user_dict: false
+  enable_encoder: false
+  enable_sentence: false
+  strict_spelling: true
+  enable_completion: true
+  encode_commit_history: false
+  prefix: "i"
+  tips: "〔两分反查〕"
+
+zhlf_reverse_lookup:
+  tags: [ zhlf_lookup ] 
+  overwrite_comment: true
+  dictionary: sbdz
+    
+punctuator:
+  import_preset: symbols
+
+recognizer:
+  patterns:
+    sbzdy: "^u[qwrtsdfgzxcvbyphjklnm][a-z0-9]*$"
+    bihua_lookup: "^[aeiou]+$"
+    pinyin_lookup: "^a[qwrtsdfgzxcvbyphjklnm][a-z]*'?$"
+    zhlf_lookup: "^i[qwrtsdfgzxcvbyphjklnm][a-z]*'?$"
+    retention: "^o[qwrtsdfgzxcvbyphjklnm0-9][a-z0-9]*$"
+    punct: '^\\([0-9]|10|[A-Za-z]+)$'
+
+key_binder:
+  bindings:
+    - { when: composing, accept: Tab, send: Page_Down }
+    - { when: composing, accept: Shift+Tab, send: Page_Up }
+    - { when: has_menu, accept: 1, send_sequence: "{Home}" }
+    - { when: has_menu, accept: 2, send_sequence: "{Home}{Shift+Right}" }
+    - { when: has_menu, accept: 3, send_sequence: "{Home}{Shift+Right}{Shift+Right}" }
+    - { when: has_menu, accept: 4, send_sequence: "{Home}{Shift+Right}{Shift+Right}{Shift+Right}" }
+    - { when: has_menu, accept: 5, send_sequence: "{End}" }
+    - { when: is_sixth, accept: a, send: 6 }
+    - { when: is_sixth, accept: e, send: 7 }
+    - { when: is_sixth, accept: u, send: 8 }
+    - { when: is_sixth, accept: i, send: 9 }
+    - { when: is_sixth, accept: o, send: 0 }
+
+menu:
+  page_size: 5
+  alternative_select_keys: "67890"
+  alternative_select_labels: [ａ,ｅ,ｕ,ｉ,ｏ]
+  
+style:
+  inline_preedit: false

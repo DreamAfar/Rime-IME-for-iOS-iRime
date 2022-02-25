@@ -1,7 +1,7 @@
 name: THUOCL_caijing
 version: "1"
 sort: by_weight
-
+vocabulary: essay-zh-hans
 ...
 发展	fa zhan	1934814
 部门	bu men	1709250

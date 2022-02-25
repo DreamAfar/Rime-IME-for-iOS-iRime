@@ -1,0 +1,137 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: xklb_dz
+  name: 星空两笔_单字
+  version: "1"
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - options: [_key_~]
+    states: [反查]
+  - options: [_key_`]
+    states: [万能]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+#    - affix_segmentor@xmfc
+    - affix_segmentor@pinyin_simp
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    - reverse_lookup_translator
+    - script_translator@pinyin_simp
+#    - table_translator@xmfc
+  filters:
+    - simplifier
+    - simplifier@simplification
+    - uniquifier
+    - reverse_lookup_filter@pinyin_simp_lookup
+#    - reverse_lookup_filter@xmfc_lookup
+
+speller:
+  alphabet: "zyxwvutsrqponmlkjihgfedcba"
+  initials: "abcdefghijklmnopqrstuvwxyz"
+  auto_select: true
+  auto_select_unique_candidate: true
+  algebra:
+    - xform/([A-Z][0-9]?)+([A-Z][0-9]?)$/$2/
+    - xform/.....A|....B|...C|..D|.E|F//
+    - xform/[0-9]$//
+
+translator:
+  dictionary: xklb_dz
+  initial_quality: 100
+  enable_charset_filter: false
+  enable_completion: true
+  enable_encoder: true
+  enable_sentence: false
+  enable_user_dict: false
+  encode_commit_history: false
+  comment_format:
+    - xform|~||
+    - xform/([A-Z][0-9]?)+([A-Z][0-9]?)$/$2/
+    - xform/.....A|....B|...C|..D|.E|F//
+    - xform/[0-9]//  #无数字
+
+simplification:
+  opencc_config: s2t.json
+  option_name: simplification
+#  show_in_comment: true #开启编码滤镜
+  tips: all #简繁对照
+
+#反查配置
+TS2:
+  comment_format:
+    - xform/([A-Z][0-9]?)+([A-Z][0-9]?)$/$2/
+    - xform/.....U|.(.)...V|...W|..X|.Y|Z|.....A|....B|...C|..D|.E|F/$1/
+    - xform|1|_|
+    - xform/^/〔/
+    - xform/$/〕/
+    - xform/ / /
+#↓音码反查方案
+pinyin_simp_lookup:
+  __include: /TS2
+  tags: [pinyin_simp]
+  dictionary: xklb_dz #反查其码
+  overwrite_comment: true
+pinyin_simp:
+  tag: pinyin_simp
+  dictionary: pinyin_simp
+  enable_sentence: true
+  enable_completion: true
+  enable_user_dict: false
+  prefix: "~"
+  tips: "〔全拼〕"
+
+
+#↓形码反查方案
+xmfc_lookup:
+  __include: /TS2
+  tags: [xmfc]
+  dictionary: xklb_dz #反查其码
+  overwrite_comment: true
+xmfc:
+  tag: xmfc
+  dictionary: xmfc
+  enable_sentence: true
+  enable_completion: true
+  enable_user_dict: false
+  prefix: "#"
+  tips: "〔提示〕"
+
+reverse_lookup:
+  __include: /TS2
+  dictionary: xklb_fc
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+  bindings:
+    - {accept: ";", send: 2, when: composing} #分号次选
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "[a-z`]*`+[a-z`]*" 
+    pinyin_simp: "^~[a-z']*'?$"
+#    xmfc: "^#[a-z']*'?$"

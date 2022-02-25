@@ -11,20 +11,18 @@ schema:
   description: |
     朙月拼音＋小鶴雙拼方案。
   dependencies:
-    - stroke
+    # - stroke
+    # - pinyin_simp
 
 switches:
   - name: ascii_mode
     reset: 0
     states: [ 中文, 西文 ]
   - name: full_shape
-    reset: 0
     states: [ 半角, 全角 ]
   - name: simplification
-    reset: 1
     states: [ 漢字, 汉字 ]
   - name: ascii_punct
-    reset: 0
     states: [ 。，, ．， ]
 
 engine:
@@ -50,9 +48,13 @@ engine:
   filters:
     - simplifier
     - uniquifier
+    # - cjk_minifier
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
+  # alphabet: zyxwvutsrqponmlkjihgfedcba-;
+  # alphabet: zyxwvutsrqponmlkjihgfedcba
+  initials": zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   delimiter: " '"
   algebra:
     - erase/^xx$/
@@ -88,7 +90,7 @@ speller:
     #- abbrev/^(.).+$/$1/
 
 translator:
-  dictionary: pinyin_simp
+  dictionary: Qiao.extended  #luna_pinyin
   prism: Qiao_flypy
   preedit_format:
     - xform/([bpmfdtnljqx])n/$1iao/
@@ -124,16 +126,26 @@ translator:
     - xform/([jqxy])v/$1u/
     - xform/([nl])v/$1ü/
 
-reverse_lookup:
-  dictionary: stroke
-  enable_completion: true
-  prefix: "`"
-  suffix: "'"
-  tips: 〔筆畫〕
-  preedit_format:
-    - xlit/hspnz/一丨丿丶乙/
-  comment_format:
-    - xform/([nl])v/$1ü/
+# reverse_lookup:
+#   dictionary: stroke
+#   enable_completion: true
+#   prefix: "`"
+#   suffix: "'"
+#   tips: 〔筆畫〕
+#   preedit_format:
+#     - xlit/hspnz/一丨丿丶乙/
+#   comment_format:
+#     - xform/([nl])v/$1ü/
+
+# reverse_lookup:
+#   dictionary: pinyin_simp
+#   prefix: "`"
+#   suffix: "'"
+#   tips: 〔拼音〕
+#   preedit_format:
+#     - xform/([nl])v/$1ü/
+#     - xform/([nl])ue/$1üe/
+#     - xform/([jqxy])v/$1u/
 
 punctuator:
   import_preset: default
@@ -144,4 +156,4 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    reverse_lookup: "`[a-z]*'?$"
+    # reverse_lookup: "`[a-z]*'?$"

@@ -1,100 +1,57 @@
-# 小鹤双拼的自定义配置
-
 patch:
   schema/name: 小鹤双拼
-  # "一级设置项/二级设置项/三级设置项": 新的设置值
-  # "另一个设置项": 新的设置值
-  # "再一个设置项": 新的设置值
-  # "含列表的设置项/@0": 列表第一个元素新的设置值
-  # "含列表的设置项/@last": 列表最后一个元素新的设置值
-  # "含列表的设置项/@before 0": 在列表第一个元素之前插入新的设置值（不建议在补丁中使用）
-  # "含列表的设置项/@after last": 在列表最后一个元素之后插入新的设置值（不建议在补丁中使用）
-  # "含列表的设置项/@next": 在列表最后一个元素之后插入新的设置值（不建议在补丁中使用）
-  # engine/filters/@next:    其中@next表示添加一个新的选项，排在已有的选项后面，@next1表示@next后面第二个，以此类推排序
-
-
-  schema/dependencies/@next:  #依赖文件
-    core   #添加core.schema.yaml， 调用lua精准过滤生僻字
-
-  # 增加切换选单
-  switches/@next:
-    name: emoji_suggestion
-    reset: 1
-    states: [ "😭️", "😄️" ]
-  switches/@next1:
-    name: symbol_support
-    reset: 1
-    states: [ "无符", "符" ]
-  switches/@next2:
-    name: extended_char             # lua精准过滤生僻字，控制开关
-    reset: 1                        #默认1，常用
-    states: ["超集", "常用"]
-
-  # filters滤镜
-
-  #3 lua精准过滤，必须放到engine/filters:滤镜第一行，这里用"@before 0"在列表第一个元素之前插入新的设置值
-  engine/filters/@before 0: "lua_filter@core"       
-
-  # 添加 emoji 滤镜
-  engine/filters/@next1: "simplifier@emoji_suggestion"       
-
-  # 添加 symbol 滤镜
-  engine/filters/@next2: "simplifier@symbol_support"
-
-  # processors
-  # 添加 以词定句
-  engine/processors/@next: "lua_processor@select_character_processor"
-
-  # translators
-  # 添加 调用custom_phrase自定义短语
-  engine/translators/@next: "table_translator@custom_phrase"
-
-  # 添加 调用Rime-lua插件，自定义系统变量输出日期、星期、时间类型输出
-  engine/translators/@next1: "lua_translator@date_translator"
-
-  # 添加 简易计算器lua，按符号"="激活计算器
-  engine/translators/@next2: "lua_translator@calculator_translator"
-  recognizer/patterns/expression: "^=.*$"
-
-  #emoji表情
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: [ 中文, 西文 ]
+    - name: emoji_suggestion
+      reset: 1
+      states: [ "No", "Yes" ]
+    - name: full_shape
+      states: [ 半角, 全角 ]
+    - name: simplification
+      reset: 1
+      states: [ 漢字, 汉字 ]
+    - name: ascii_punct
+      states: [ 。，, ．， ]
+  engine/translators:
+    # - lua_translator@date_translator
+    # - lua_translator@week_translator
+    - punct_translator
+    - script_translator
+    - table_translator@custom_phrase
+  engine/filters:
+    - simplifier@emoji_suggestion
+    - simplifier
+    - uniquifier
+    #- charset_filter@gbk
+    # - single_char_filter
+  engine/processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
   emoji_suggestion:
     opencc_config: emoji.json
     option_name: emoji_suggestion
-    tips: all
+    # tips: all
   reverse_lookup: {}
 
-  #symbol符号
-  symbol_support:
-    opencc_config: symbol.json
-    option_name: symbol_support
-    tips: all
-
-  # 自定义短语 Custom_phrase.txt # Tab 不能用空格代替
-  custom_phrase:
-    dictionary: ""
-    user_dict: custom_phrase     #设定用户词典名
-    db_class: stabledb           #设定用户词典类型，可设 tabledb〔文本〕或 userdb〔二进制〕
-    enable_completion: false     #提前显示尚未输入完整码的字〔true 或 false〕
-    enable_sentence: false       #是否开启自动造句〔true 或 false〕
-    initial_quality: 1           #设定此翻译器结果优先级，如果想要自定义的词排在前面，这个值尽量设大一点
-
-  # #載入擴充詞庫
+  #載入朙月拼音擴充詞庫
   'translator/dictionary': Qiao.extended
-  #双拼不自动显示全拼字母
-  # 'translator/preedit_format': {}
+  'translator/preedit_format': {}
 
 
   # 自定义符号上屏
   punctuator:
     import_preset: symbols
-    symbols:
-      "/fs": [½, ‰, ¼, ⅓, ⅔, ¾, ⅒ ]
-      "/bq": [😂️, 😅️, ☺️, 😱️, 😭️, 😇️, 🙃️, 🤔️, 💊️, 💯️, 👍️, 🙈️, 💩️, 😈️ ]
-      "/dn": [⌘, ⌥, ⇧, ⌃, ⎋, ⇪, , ⌫, ⌦, ↩︎, ⏎, ↑, ↓, ←, →, ↖, ↘, ⇟, ⇞]
-      "/fh": [ ©, ®, ℗, ⓘ, ℠, ™, ℡, ␡, ♂, ♀, ☉, ☊, ☋, ☌, ☍, ☐, ☑︎, ☒, ☜, ☝, ☞, ☟, ✎, ✄, ♻, ⚐, ⚑, ⚠]
-      "/xh": [ ＊, ×, ✱, ★, ☆, ✩, ✧, ❋, ❊, ❉, ❈, ❅, ✿, ✲]
-    full_shape:
-      '/' : [ ／, ÷ ]
+    # 自定义快捷符号输入
+    # symbols:
+    #   "/fs": [½, ‰, ¼, ⅓, ⅔, ¾, ⅒ ]
     half_shape:
       "#": "#"
       "*": "*"
@@ -104,7 +61,7 @@ patch:
       "=": "="
       "/": ["/", "÷",]
       '\': "、"
-      "_" : "──"
+      # "_" : "──"
       "'": {pair: ["「", "」"]}
       "[": ["【", "["]
       "]": ["】", "]"]
@@ -114,6 +71,22 @@ patch:
 
   recognizer/patterns/punct: "^/([0-9]0?|[A-Za-z]+)$"
 
-  # "key_binder/bindings": # 设置哪些键可以翻页，需要哪个取消注释即可 
-  #   - { when: always, accept: Control+Shift+2, toggle: simplification }
-  #   - { when: always, accept: Control+Shift+at, toggle: simplification }
+    
+
+  ### 双拼使用自定义词典 custom_phrase.txt
+  custom_phrase:
+    dictionary: ""
+    user_dict: custom_phrase
+    db_class: stabledb
+    enable_completion: false
+    enable_sentence: false
+    initial_quality: 1
+  "engine/translators/@5": table_translator@custom_phrase
+
+# Rx: BlindingDark/rime-easy-en:customize:schema=double_pinyin_flypy
+  __include: easy_en:/patch
+  easy_en/enable_sentence: false
+# Rx: lotem/rime-octagram-data:customize:schema=luna_pinyin,model=hans
+  # __include: grammar:/hant
+# Rx: BlindingDark/rime-lua-select-character:customize:schema=luna_pinyin
+  # __include: lua_select_character:/patch # 需要lua_selector打开本行注释

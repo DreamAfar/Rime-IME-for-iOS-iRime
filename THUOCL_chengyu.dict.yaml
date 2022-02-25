@@ -1,7 +1,10 @@
+# 「嚎啕大哭」→「号啕大哭」
+# 「归根结蒂」→「归根结底」
+# 「钩心斗角」→「勾心斗角」
 name: THUOCL_chengyu
 version: "1"
 sort: by_weight
-
+vocabulary: essay-zh-hans
 ...
 坚定不移	jian ding bu yi	54113
 随时随地	sui shi sui di	52510
@@ -864,7 +867,7 @@ sort: by_weight
 汗流浃背	han liu jia bei	3083
 七嘴八舌	qi zui ba she	3078
 本末倒置	ben mo dao zhi	3076
-嚎啕大哭	hao tao da ku	3073
+号啕大哭	hao tao da ku	3073
 不顾一切	bu gu yi qie	3073
 混淆视听	hun xiao shi ting	3071
 热血沸腾	re xue fei teng	3068
@@ -5744,7 +5747,6 @@ sort: by_weight
 披红戴花	pi hong dai hua	122
 法力无边	fa li wu bian	122
 嫣然一笑	yan ran yi xiao	122
-器宇轩昂	qi yu xuan ang	122
 人逢喜事精神爽	ren feng xi shi jing shen shuang	122
 计上心来	ji shang xin lai	122
 电光石火	dian guang shi huo	122
@@ -6232,7 +6234,6 @@ sort: by_weight
 子丑寅卯	zi chou yin mao	91
 客随主便	ke sui zhu bian	91
 参差错落	cen ci cuo luo	91
-钩心斗角	gou xin dou jiao	91
 不知就里	bu zhi jiu li	91
 添枝加叶	tian zhi jia ye	91
 天外飞来	tian wai fei lai	91
@@ -6410,7 +6411,6 @@ sort: by_weight
 皮之不存毛将焉附	pi zhi bu cun mao jiang yan fu	81
 箭在弦上不得不发	jian zai xian shang bu de bu fa	81
 结发夫妻	jie fa fu qi	81
-归根结蒂	gui gen jie di	81
 剑胆琴心	jian dan qin xin	80
 一叶障目不见泰山	yi ye zhang mu bu jian tai shan	80
 束手待毙	shu shou dai bi	80

@@ -1,0 +1,238 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: Qiao_pinyin
+  name: QIaoの拼音
+  version: "1.0.0"
+  author: Qiao
+  description: |
+    参考四叶草方案、朙月简体拼音，由Qiao定制
+    特点：
+      1. 结合搜狗输入法的输入习惯
+      2. 默认开启 emoji 表情支持
+      3. 加上很多特殊符号的输入支持
+      4. 繁简切换支持
+      5. 许多智能纠错
+  dependencies:  # 如果本方案依賴於其它方案〔通常來說會依頼其它方案做爲反查，抑或是兩種或多種方案混用時〕
+    - core
+    # - easy_en
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中, 英 ]
+  - name: zh_simp
+    reset: 1
+    states: [ 漢字, 汉字 ]
+  - name: full_shape
+    reset: 0
+    states: [ 半, 全 ]
+  - name: emoji_suggestion
+    reset: 1
+    states: [ "😭️", "😄️" ]
+  - name: symbol_support
+    reset: 1
+    states: [ "无符", "符" ]
+  - name: ascii_punct
+    reset: 0
+    states: [ 。，, ．， ]
+  - name: extended_char             # lua精准过滤生僻字，控制开关
+    reset: 1                        #默认1，常用
+    states: ["超集", "常用"]
+  - name: English             # 简单的English互译滤镜
+    reset: 0                        #默认1，常用
+    states: ["EN_关", "EN_开"]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer  # 缺少这个会导致lua计算器无法使用
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+    # - lua_processor@select_character_processor  # 添加 以词定句
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - reverse_lookup_translator
+    - script_translator
+    # - echo_translator       # 没有候选项时，创建一个与编码串一个模样的候选项
+    - lua_translator@date_translator         # 添加 调用Rime-lua插件，自定义系统变量输出日期、星期、时间类型输出
+    - lua_translator@calculator_translator   # 添加 简易计算器lua，按符号"="激活计算器
+    - table_translator@custom_phrase         # 添加 调用custom_phrase自定义短语
+    # - table_translator@easy_english          # 载入翻译英文的码表翻译器，取名为 easy_english
+  filters:
+    - lua_filter@core  #lua精准过滤，必须放到engine/filters:滤镜第一行
+    - simplifier
+    - uniquifier
+    - simplifier@emoji_suggestion   #emoji
+    - simplifier@symbol_support
+    # - simplifier@English  # 添加 简单的English互译滤镜
+
+  # 增加八股文的【简化字】语言模型，优化长句输入
+  grammar/language: zh-hans-t-essay-bgw  
+
+## 調用中英混輸詞典
+chinese_contain_english:
+  dictionary: chinese_contain_english
+
+# 自定义短语 Custom_phrase.txt # Tab 不能用空格代替
+custom_phrase:
+  dictionary: ""
+  user_dict: custom_phrase     #设定用户词典名
+  db_class: stabledb           #设定用户词典类型，可设 tabledb〔文本〕或 userdb〔二进制〕
+  enable_completion: false     #提前显示尚未输入完整码的字〔true 或 false〕
+  enable_sentence: false       #是否开启自动造句〔true 或 false〕
+  initial_quality: 1           #设定此翻译器结果优先级，如果想要自定义的词排在前面，这个值尽量设大一点
+
+# easy_en 英文的码表翻译器  注意：中英文组合词汇要加在英文方案
+# easy_english:
+#   dictionary: easy_en
+#   spelling_hints: 9
+#   enable_completion: false      # 是否启用英文输入联想补全（编码提示）
+#   enable_sentence: false        # 是否开启自动造句〔true 或 false〕
+#   initial_quality: 0            # 调整英文候选词的位置，easy_en 对此项的默认设置为 -1，你可以尝试 0 到 0.5 左右的数值。数值越大，英文单词出现的就越靠前。
+
+#简单的English互译滤镜
+English:
+  opencc_config: English.json
+  option_name: English
+  tips: all
+
+simplifier:
+  option_name: zh_simp
+
+emoji_suggestion:
+  opencc_config: emoji.json
+  option_name: emoji_suggestion
+  tips: all
+
+symbol_support:
+  opencc_config: symbol.json
+  option_name: symbol_support
+  tips: all
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba  # alphabet：设置本 speller 需要监听的键
+  # initials: zyxwvutsrqponmlkjihgfedcba  # initials：设置哪些键仅在开头的时候才需要监听
+  # finals: ;  # finals：设置哪些键仅在末尾的时候才需要监听
+  delimiter: " '"  #分词符
+  algebra:  # algebra：Rime 核心的拼写运算规则，所有 algebra 算出的规则最后写入 prism
+    # - erase/^xx$/                      # 第一行保留
+    # 消除／Erasion : 若拼寫與<模式> 完全匹配，則將該拼寫從有效拼寫集合中消除。
+    # 格式：erase/<模式>/
+    # 實例：算式 erase/^.*\d$/  運算元dang1結果 帶聲調的拼音不再可用
+    
+    # 改寫拼寫運算，使得含西文的詞彙（位於 Qiao.cn_en.dict.yaml 中）不影響簡拼功能（注意，此功能只適用於全拼拼音系列方案，不適用於各類雙拼方案）
+    # 加入中英文混输的正则过滤，没有这个会导致输入【qq、ss、sd、sf】简拼失效和【i、r】开头等英文单词词组无法显示
+    # - xform/^([b-df-np-z])$/$1_/
+    # - xform/^([b-df-hj-np-tv-z])$/$1_/
+    - xform/^_([a-z].*)$/$1/    # 改寫拼寫運算使所有【a-z】26个字母
+    # - abbrev/^([a-z])$/$1_/    # 改寫拼寫運算使所有【a-z】26个字母
+    # - xform/^([r-i-m-e])$/$1_/
+
+    # 模糊音定義
+    # 需要哪組就刪去行首的 # 號，單雙向任選
+    - derive/^([zcs])h/$1/             # zh, ch, sh => z, c, s
+    - derive/^([zcs])([^h])/$1h$2/     # z, c, s => zh, ch, sh
+
+    # 基础（简拼）
+    - abbrev/^([a-z]).+$/$1/
+    - abbrev/^([zcs]h).+$/$1/
+    # - abbrev/^(.).+$/$1/
+          # 縮略／Abbreviation : 執行派生運算；派生出的拼寫將獲得「縮略」屬性，會在音節切分時與通常的拼寫做區分處理。
+          # 格式：abbrev/<模式>/<替換式>/
+          # 實例：算式 abbrev/^([a-z]).+$/$1/
+          # 效果：以首字母爲多字母音節碼的縮寫。
+
+    # 补全
+    - derive/([dtngkhrzcs])o(u|ng)$/$1o/   # o = ou; o = ong
+    - derive/ong$/on/      # on = ong
+    - derive/^ding$/din/     # din = ding
+
+    # 处理 v 和 u
+    # - derive/^([nl])ue$/$1ve/   # nve = nue; lve = lue
+    # - derive/^([jqxy])u/$1v/    # v = u; v = u  派生：将输入ju和jv等效；将输入qu和qv等效；将输入xu和xv等效；将输入yu和yv等效，次出的u和v均对应拼音中的ü
+
+    # 智能纠错
+    - derive/ao$/oa/       # oa = ao
+    - derive/([iu])a(o|ng?)$/a$1$2/   # aio = iao; aing = iang; aung = uang
+    - derive/([aeiou])ng$/$1gn/   # gn = ng
+    - derive/un$/uen/    # uen = un
+    - derive/ui$/uei/    # uei = ui
+    - derive/iu$/iou/    # iou = ui
+    - derive/tie$/tei/    # tei = tie
+    - derive/i$/ii/      # ii = i  # i 不小心按两下
+    - derive/u$/uu/      # ui = u  # u 不小心按两下
+
+    # 手机按键按错
+    - derive/^shi$/ahi/    # ahi = shi
+    - derive/^wei$/wwi/    # ahi = shi
+
+    # - derive/^([nl])ve$/$1ue/  # nue = nve, lue = lve 
+
+translator:
+  dictionary: Qiao.extended  #Qiao
+  prism: Qiao_pinyin
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    # - xform/([jqxy])v/$1u/
+
+
+key_binder:
+  import_preset: default
+#   bindings:
+#     __patch:
+#       - key_bindings:/emacs_editing  # emacs 习惯
+#       - key_bindings:/move_by_word_with_tab  # tab 在单词间切换
+#       - key_bindings:/paging_with_minus_equal  # 减号等号翻页
+#       - key_bindings:/paging_with_comma_period   # 逗号句号翻页
+#       - key_bindings:/paging_with_brackets   # 中括号翻页
+#       - clover.key_bindings:/numbered_mode_switch   # Ctrl+Shift+数字 切换开关
+#       - clover.key_bindings:/windows_compatible_mode_switch   # Windows 兼容
+#       - clover.key_bindings:/kp_enter_is_return   # 小键盘回车设为普通回车
+
+ascii_composer:
+  import_preset: default
+  good_old_caps_lock: true
+  switch_key:
+    Shift_L: commit_code   # 左 Shift 切换直接上屏字母
+    Shift_R: commit_code   # 右 Shift 切换直接上屏字母
+    Control_L: noop
+    Control_R: noop
+    Caps_Lock: noop
+    Eisu_toggle: clear
+
+reverse_lookup:
+  dictionary: stroke
+  enable_completion: true
+  prefix: "`"
+  suffix: "'"
+  tips: 〔筆畫〕
+  preedit_format:
+    - xlit/hspnz/一丨丿丶乙/
+  comment_format:
+    - xform/([nl])v/$1ü/
+
+punctuator:
+  import_preset: default
+
+
+recognizer:
+  import_preset: default
+  patterns:
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    expression: "^=.*$" # 启用计算器=号引导
+    punct: "^/([0-9]0?|[a-z]+)$" # 特殊符号引导  "^/([0-9]0?|[A-Za-z]+)$"
+    reverse_lookup: "`[a-z]*'?$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"

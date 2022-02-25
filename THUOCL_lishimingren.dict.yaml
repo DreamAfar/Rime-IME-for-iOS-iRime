@@ -1,7 +1,8 @@
+# 关云长zhang → chang
 name: THUOCL_lishimingren
 version: "1"
 sort: by_weight
-
+vocabulary: essay-zh-hans
 ...
 毛泽东	mao ze dong	61678
 胡锦涛	hu jin tao	58429
@@ -1863,7 +1864,7 @@ sort: by_weight
 王昭君	wang zhao jun	331
 刘杉	liu shan	330
 范晓萱	fan xiao xuan	330
-关云长	guan yun zhang	329
+关云长	guan yun chang	329
 千寻	qian xun	329
 伊势	yi shi	329
 李兰娟	li lan juan	329

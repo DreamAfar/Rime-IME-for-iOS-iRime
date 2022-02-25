@@ -85,7 +85,7 @@ speller:
     #- abbrev/^(.).+$/$1/
 
 translator:
-  dictionary: luna_pinyin
+  dictionary: Qiao.extended
   prism: double_pinyin_flypy
   preedit_format:
     - xform/([bpmfdtnljqx])n/$1iao/

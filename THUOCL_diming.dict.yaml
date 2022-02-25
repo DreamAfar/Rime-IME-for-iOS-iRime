@@ -1,7 +1,8 @@
+# del 「丁子路口」→「丁字路口」
 name: THUOCL_diming
 version: "1"
 sort: by_weight
-
+vocabulary: essay-zh-hans
 ...
 北京	bei jing	1119506
 美国	mei guo	864762
@@ -33777,7 +33778,6 @@ sort: by_weight
 何志锋	he zhi feng	3
 广罗乡	guang luo xiang	3
 小潞邑北站	xiao lu yi bei zhan	3
-丁子路口	ding zi lu kou	3
 南坑水库	nan keng shui ku	3
 胡岭村	hu ling cun	3
 石子坪村	shi zi ping cun	3

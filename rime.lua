@@ -1,10 +1,76 @@
---英语方案
+--[[
+librime-lua 样例
+
+调用方法：
+在配方文件中作如下修改：
+```
+  engine:
+    ...
+    translators:
+      ...
+      - lua_translator@lua_function3
+      - lua_translator@lua_function4
+      ...
+    filters:
+      ...
+      - lua_filter@lua_function1
+      - lua_filter@lua_function2
+      ...
+```
+
+其中各 `lua_function` 为在本文件所定义变量名。
+--]] --[[
+本文件的后面是若干个例子，按照由简单到复杂的顺序示例了 librime-lua 的用法。
+每个例子都被组织在 `lua` 目录下的单独文件中，打开对应文件可看到实现和注解。
+
+各例可使用 `require` 引入。
+如：
+```
+  foo = require("bar")
+```
+可认为是载入 `lua/bar.lua` 中的例子，并起名为 `foo`。
+配方文件中的引用方法为：`...@foo`。
+
+--]]
+
 -- local english = require("english")()
 -- english_processor = english.processor
 -- english_segmentor = english.segmentor
 -- english_translator = english.translator
 -- english_filter = english.filter
 -- english_filter0 = english.filter0
+
+-- local M= require("melt")
+-- get_date = M.getdate
+-- jpcharset_filter = M.jpcharsetfilter
+-- long_word_filter = M.longwordfilter
+-- autocap_filter =M.autocapfilter
+-- oo_processor = M.ooprocessor
+-- oo_filter =M.oofilter
+
+-- table_tran= require("table_translator")
+-- easy_en_cn_translator: 候选
+-- 详见 `lua/easy_en_cn.lua`
+
+-- en_cn = require("en_cn_filter")
+
+local en_cn = require("en_cn_mix")()
+en_cn_processor = en_cn.processor
+-- en_cn_mix_segmentor = en_cn_mix.segmentor
+-- en_cn_mix_translator = en_cn.translator
+en_cn_filter = en_cn.filter
+
+history_processor = require('history')
+
+--
+-- user_dictionary = require("user_dictionary")
+user_dictionary = require("user_dictionary2")
+
+-- iRime嵌入式编码显示首选
+preedit_preview = require("preedit_preview")
+
+-- iRime九宫格方案编码提示lua
+preedit_filter = require("preedit")
 
 -- 在Rime輸入任意Unicode字符
 -- unicode_translator = require("unicode_translator")
@@ -19,98 +85,86 @@ select_character_processor = require("select_character")
 -- 过滤iOS无法显示的字
 core = require("core_filter")
 
+-- easy_en_enhance_filter: 连续输入增强
+-- 详见 `lua/easy_en.lua`
+local easy_en = require("easy_en")
+easy_en_enhance_filter = easy_en.enhance_filter
 
-function date_translator(input, seg)
+-- single_char_filter: 候选项英文首字母大写
+-- 详见 `lua/single_char.lua`
+-- first_To_Upper_filter = require("first_to_upper")
 
-    ---月份
-    local date_m_tab = {'一','二','三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二' }
-    ---日
-    local date_d_tab = {'一','二','三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二' , '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十', '二十一', '二十二', '二十三', '二十四', '二十五', '二十六', '二十七', '二十八', '二十九', '三十', '三十一' }
+-- single_char_filter: 候选项重排序，使单字优先
+-- 详见 `lua/single_char.lua`
+single_char_filter = require("single_char")
 
-    --- 翻译日期
-    if (input == "date" or input == "rq") then
+-- charset_filter: 滤除含 CJK 扩展汉字的候选项
+-- charset_comment_filter: 为候选项加上其所属字符集的注释
+-- 详见 `lua/charset.lua`
+local charset = require("charset")
+charset_filter = charset.filter
+charset_comment_filter = charset.comment_filter
 
+-- reverse_lookup_filter: 依地球拼音为候选项加上带调拼音的注释
+-- 详见 `lua/reverse.lua`
+reverse_lookup_filter = require("reverse")
 
-        --- Candidate(type, start, end, text, comment)
-        yield(Candidate("date", seg.start, seg._end, os.date("%Y年%m月%d日"), ""))  ---效果：2021年02月25日
-        yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d"), ""))  ---效果：2021-02-25
-        -- yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d"), ""))  ---效果：2021/02/25
-        yield(Candidate("date", seg.start, seg._end,date_m_tab[tonumber(os.date("%m"))].."月"..date_d_tab[tonumber(os.date("%d"))].."日",""))  ---输出效果（英文）：二月二十八日
-        -- yield(Candidate("date", seg.start, seg._end, os.date("%m-%d"), ""))  ---效果：02-25
-        -- yield(Candidate("date", seg.start, seg._end, os.date("%m月%d日"), ""))  ---效果：02月-25日
-        -- yield(Candidate("date", seg.start, seg._end, os.date("%m-%d-%Y"), ""))  ---效果：02-25-2021
-    end
+-- date_translator: 将 `date` 翻译为当前日期
+-- 详见 `lua/date.lua`:
+date_translator = require("date")
 
-    --- 翻译春夏秋冬
-    if (input == "season" or input == "jj") then
-        ---方法1，根据月份数字，输出对应数字的数组内容
-        local weakTab = {'春天','春天','春天', '夏天', '夏天', '夏天', '秋天', '秋天', '秋天', '冬天', '冬天', '冬天'}
-        local weakTab1 = {'Spring','Spring','Spring', 'Summer', 'Summer', 'Summer', 'Autumn', 'Autumn', 'Autumn', 'Winter', 'Winter', 'Winter'}
+-- time_translator: 将 `time` 翻译为当前时间
+-- 详见 `lua/time.lua`
+-- time_translator = require("time")
 
-        yield(Candidate("week", seg.start, seg._end, weakTab[tonumber(os.date("%w")+1)], ""))  ---输出效果：春天
-        yield(Candidate("season", seg.start, seg._end, weakTab1[tonumber(os.date("%w")+1)],""))  ---输出效果（英文）：Spring
+-- number_translator: 将 `/` + 阿拉伯数字 翻译为大小写汉字
+-- 详见 `lua/number.lua`
+number_translator = require("number")
 
-        -- ---方法2，通过 or 条件 ，判断对应月份属于什么季节
-        -- if (os.date("%m") == "01" or os.date("%m") == "02" or os.date("%m") == "03" ) then
-        --     weekstr = "春天"
-        --     weekstr1 = "Spring"
-        -- end
-        -- if (os.date("%m") == "04" or os.date("%m") == "05" or os.date("%m") == "06" ) then
-        --     weekstr = "夏天"
-        --     weekstr1 = "Summer"
-        -- end
-        -- if (os.date("%m") == "07" or os.date("%m") == "08" or os.date("%m") == "09" ) then
-        --     weekstr = "秋天"
-        --     weekstr1 = "Autumn"
-        -- end
-        -- if (os.date("%m") == "10" or os.date("%m") == "11" or os.date("%m") == "12" ) then
-        --     weekstr = "冬天"
-        --     weekstr1 = "Winter"
-        -- end
+-- number_translator: 将 `/` + 阿拉伯数字 翻译为大小写汉字
+-- 详见 `lua/number.lua`
+-- week_translator = require("week")
 
-        -- yield(Candidate("season", seg.start, seg._end, weekstr, ""))  ---效果：春
-        -- yield(Candidate("season", seg.start, seg._end, weekstr1,""))  ---效果（英文）：Spring
-    end
+-- use wildcard to search code 使用通配符搜索代码
+expand_translator = require("expand_translator")
 
-    --- 翻译时间
-    if (input == "time" or input == "sj" or input == "uijm" or input == "now") then
-        --- Candidate(type, start, end, text, comment)
-        yield(Candidate("time", seg.start, seg._end, os.date("%H:%M"), ""))  ---效果：23:52
-        -- yield(Candidate("time", seg.start, seg._end, os.date("%Y%m%d%H%M%S"), ""))   ---效果：20210225235334
-        -- yield(Candidate("time", seg.start, seg._end, os.date("%H:%M:%S"), ""))  ---效果：23:53:58
-        -- yield(Candidate("time", seg.start, seg._end, os.date("%H点%M分%S秒"), ""))  ---效果：23:53:58
-    end
+-- III. processors:
 
-    -- @JiandanDream
-    -- https://github.com/KyleBing/rime-wubi86-jidian/issues/54
+-- switch_processor: 通过选择自定义的候选项来切换开关（以简繁切换和下一方案为例）
+-- 详见 `lua/switch.lua`
+switch_processor = require("switch")
 
-    if (input == "week" or input == "xq") then
-        ---根据星期的数字，输出对应数字的数组内容
-        local weakTab = {'日', '一', '二', '三', '四', '五', '六'}
-        local weakTab2 = {'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'}
-        local weakTab3 = {'日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'}
-        local weakTab4 = {'にちようび', 'げつようび', 'かようび', 'すいようび', 'もくようび', 'きんようび', 'どようび'}
-        local weakTab5 = weakTab4[tonumber(os.date("%w")+1)]
+-- 不使用连续输入增强
+-- 你可以在 easy_en.custom.yaml 的 patch 节点中添加选项以关闭连续输入增强功能。
 
-        yield(Candidate("week", seg.start, seg._end, "星期"..weakTab[tonumber(os.date("%w")+1)], ""))  ---拼接效果：星期四
-        yield(Candidate("week", seg.start, seg._end, "周"..weakTab[tonumber(os.date("%w")+1)], ""))  ---拼接效果：周四
-        yield(Candidate("week", seg.start, seg._end, weakTab2[tonumber(os.date("%w")+1)], ""))  ---效果（英文）：Sunday
-        yield(Candidate("week", seg.start, seg._end, weakTab3[tonumber(os.date("%w")+1)], weakTab5))  ---效果（日文）：日曜日
+-- patch:
+--   engine/filters:
+--     - uniquifier
+-- 在某些系统上，若不按照类似上述方式手动关闭连续输入增强，即使没有引入 lua 脚本也会导致 easy_en 无法正常使用。
 
-    end
-end
+-- date_translator: 将 `date` 翻译为当前日期
+-- 详见 `lua/date.lua`:
+xkdate_translator = require("xkdate")
 
---- 过滤器：候选项重排序，使单字优先
-function single_char_first_filter(input)
-    local l = {}
-    for cand in input:iter() do
-        if (utf8.len(cand.text) == 1) then
-            yield(cand)
-        else
-            table.insert(l, cand)
-        end
-    end
-    for cand in ipairs(l) do
-        yield(cand)
-    end
-end
+-- time_translator: 将 `time` 翻译为当前时间
+-- 详见 `lua/time.lua`
+xktime_translator = require("xktime")
+
+-- xkjd6_filter: 单字模式 & 630 即 ss 词组提示
+--- 修改自 @懒散 TsFreddie https://github.com/TsFreddie/jdc_lambda/blob/master/rime/lua/xkjdc_sbb_hint.lua
+-- 可由 schema 的 danzi_mode 与 wxw_hint 开关控制
+-- 详见 `lua/xkjd6_filter.lua`
+xkjd6_filter = require("xkjd6_filter")
+
+-- 顶功处理器
+topup_processor = require("for_topup")
+
+-- 声笔笔简码提示 | 顶功提示 | 补全处理
+hint_filter = require("for_hint")
+
+-- number_translator: 将 `=` + 阿拉伯数字 翻译为大小写汉字
+-- 详见 `lua/number.lua`
+number_translator = require("xnumber")
+
+-- 用 ' 作为次选键
+smart_2 = require("smart_2")

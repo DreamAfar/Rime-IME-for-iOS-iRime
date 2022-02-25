@@ -1,7 +1,10 @@
+# 修正了一些「了」的注音
+# 修正了一些「都」的注音
+#「路曼曼其修远兮」→「路漫漫其修远兮」
 name: THUOCL_poem
 version: "1"
 sort: by_weight
-
+vocabulary: essay-zh-hans
 ...
 更上一层楼	geng shang yi ceng lou	4472
 民以食为天	min yi shi wei tian	3900
@@ -730,7 +733,7 @@ sort: by_weight
 春来发几枝	chun lai fa ji zhi	40
 曾益其所不能	ceng yi qi suo bu neng	40
 千金散尽还复来	qian jin san jin hai fu lai	40
-事了拂衣去	shi le fu yi qu	40
+事了拂衣去	shi liao fu yi qu	40
 九天开出一成都	jiu tian kai chu yi cheng du	39
 俏也不争春	qiao ye bu zheng chun	39
 不废江河万古流	bu fei jiang he wan gu liu	39
@@ -849,7 +852,7 @@ sort: by_weight
 江南与江北	jiang nan yu jiang bei	33
 古来征战几人回	gu lai zheng zhan ji ren hui	33
 天气晚来秋	tian qi wan lai qiu	33
-春花秋月何时了	chun hua qiu yue he shi le	33
+春花秋月何时了	chun hua qiu yue he shi liao	33
 孤舟蓑笠翁	gu zhou suo li weng	33
 皎皎河汉女	jiao jiao he han nv	33
 遥看瀑布挂前川	yao kan pu bu gua qian chuan	33
@@ -1428,7 +1431,6 @@ sort: by_weight
 漫卷诗书喜欲狂	man juan shi shu xi yu kuang	16
 人生天地之间	ren sheng tian di zhi jian	16
 克终者盖寡	ke zhong zhe gai gua	16
-路曼曼其修远兮	lu man man qi xiu yuan xi	16
 东风洒雨露	dong feng sa yu lu	16
 怎一个愁字了得	zen yi ge chou zi liao de	16
 孤帆一片日边来	gu fan yi pian ri bian lai	16
@@ -2018,7 +2020,7 @@ sort: by_weight
 又摘桃花换酒钱	you zhai tao hua huan jiu qian	9
 善建者不拔	shan jian zhe bu ba	9
 紫藤挂云木	zi teng gua yun mu	9
-绝胜烟柳满皇都	jue sheng yan liu man huang dou	9
+绝胜烟柳满皇都	jue sheng yan liu man huang du	9
 吾已成为阴间一鬼	wu yi cheng wei yin jian yi gui	9
 吾作此书时	wu zuo ci shu shi	9
 不宜妄自菲薄	bu yi wang zi fei bo	9
@@ -2106,7 +2108,7 @@ sort: by_weight
 小时不识月	xiao shi bu shi yue	9
 影入平羌江水流	ying ru ping qiang jiang shui liu	9
 只恐双溪舴艋舟	zhi kong shuang xi ze meng zhou	9
-小乔初嫁了	xiao qiao chu jia le	9
+小乔初嫁了	xiao qiao chu jia liao	9
 常愿天下有情人都成眷属	chang yuan tian xia you qing ren dou cheng juan shu	9
 而死于安乐也	er si yu an le ye	9
 甲光向日金鳞开	jia guang xiang ri jin lin kai	9
@@ -3124,7 +3126,7 @@ sort: by_weight
 一遍洗寰瀛	yi bian xi huan ying	5
 海岳尚可倾	hai yue shang ke qing	5
 土豆烧熟了	tu dou shao shu le	5
-才了蚕桑又插田	cai le can sang you cha tian	5
+才了蚕桑又插田	cai liao can sang you cha tian	5
 彼亦一是非	bi yi yi shi fei	5
 吾辈处今日之中国	wu bei chu jin ri zhi zhong guo	5
 日落长沙秋色远	ri luo chang sha qiu se yuan	5
@@ -3605,7 +3607,7 @@ sort: by_weight
 虽无丝竹管弦之盛	sui wu si zhu guan xian zhi sheng	4
 愿逐月华流照君	yuan zhu yue hua liu zhao jun	4
 辛苦遭逢起一经	xin ku zao feng qi yi jing	4
-都门帐饮无绪	dou men zhang yin wu xu	4
+都门帐饮无绪	du men zhang yin wu xu	4
 倚南窗以寄傲	yi nan chuang yi ji ao	4
 域中有四大	yu zhong you si da	4
 众芳摇落独暄妍	zhong fang yao luo du xuan yan	4
@@ -4115,7 +4117,7 @@ sort: by_weight
 利是焚身火	li shi fen shen huo	3
 越人语天姥	yue ren yu tian lao	3
 江色分明绿	jiang se fen ming lv	3
-玄都观里桃千树	xuan dou guan li tao qian shu	3
+玄都观里桃千树	xuan du guan li tao qian shu	3
 室中更无人	shi zhong geng wu ren	3
 晓镜但愁云鬓改	xiao jing dan chou yun bin gai	3
 湖月照我影	hu yue zhao wo ying	3
@@ -5457,7 +5459,7 @@ sort: by_weight
 守拙归田园	shou zhuo gui tian yuan	2
 不敢言而敢怒	bu gan yan er gan nu	2
 还应说着远行人	hai ying shuo zhe yuan xing ren	2
-临邛道士鸿都客	lin qiong dao shi hong dou ke	2
+临邛道士鸿都客	lin qiong dao shi hong du ke	2
 累五而不坠	lei wu er bu zhui	2
 为谁憔悴损芳姿	wei shei qiao cui sun fang zi	2
 为之斗斛以量之	wei zhi dou hu yi liang zhi	2
@@ -5536,7 +5538,7 @@ sort: by_weight
 萱草生堂阶	xuan cao sheng tang jie	2
 花落水流红	hua luo shui liu hong	2
 题金城临河驿楼	ti jin cheng lin he yi lou	2
-了然无一碍	le ran wu yi ai	2
+了然无一碍	liao ran wu yi ai	2
 湖上新春柳	hu shang xin chun liu	2
 春风先发苑中梅	chun feng xian fa yuan zhong mei	2
 寒食野望吟	han shi ye wang yin	2
@@ -5556,7 +5558,7 @@ sort: by_weight
 因得养顽疏	yin de yang wan shu	2
 玉露凋伤枫树林	yu lu diao shang feng shu lin	2
 渌水荡漾清猿啼	lu shui dang yang qing yuan ti	2
-皇都陆海应无数	huang dou lu hai ying wu shu	2
+皇都陆海应无数	huang du lu hai ying wu shu	2
 尚爱此山看不足	shang ai ci shan kan bu zu	2
 精光射天地	jing guang she tian di	2
 艰难愧深情	jian nan kui shen qing	2
@@ -6082,7 +6084,7 @@ sort: by_weight
 权奇蹴踏无尘埃	quan qi cu ta wu chen ai	2
 绿槐高柳咽新蝉	lv huai gao liu yan xin chan	2
 以相如功大	yi xiang ru gong da	2
-太乙近天都	tai yi jin tian dou	2
+太乙近天都	tai yi jin tian du	2
 昨日登高罢	zuo ri deng gao ba	2
 马鸣风萧萧	ma ming feng xiao xiao	2
 则天下之民皆引领而望之矣	ze tian xia zhi min jie yin ling er wang zhi yi	2
@@ -6852,7 +6854,7 @@ sort: by_weight
 两岸罗衣破晕香	liang an luo yi po yun xiang	1
 相思相见知何日	xiang si xiang jian zhi he ri	1
 孤城西北起高楼	gu cheng xi bei qi gao lou	1
-我是清都山水郎	wo shi qing dou shan shui lang	1
+我是清都山水郎	wo shi qing du shan shui lang	1
 双棋未遍局	shuang qi wei bian ju	1
 天平山上白云泉	tian ping shan shang bai yun quan	1
 宣父犹能畏后生	xuan fu you neng wei hou sheng	1
@@ -8326,7 +8328,7 @@ sort: by_weight
 万里不惜死	wan li bu xi si	1
 万里长江边	wan li zhang jiang bian	1
 夜饮东坡醒复醉	ye yin dong po xing fu zui	1
-风韵雍容未甚都	feng yun yong rong wei shen dou	1
+风韵雍容未甚都	feng yun yong rong wei shen du	1
 秋分客尚在	qiu fen ke shang zai	1
 夫子不为也	fu zi bu wei ye	1
 众老忧添岁	zhong lao you tian sui	1
@@ -9694,7 +9696,7 @@ sort: by_weight
 此养神之道也	ci yang shen zhi dao ye	1
 孤鸾舞镜不作双	gu luan wu jing bu zuo shuang	1
 君自此远矣	jun zi ci yuan yi	1
-惟梁孝王都	wei liang xiao wang dou	1
+惟梁孝王都	wei liang xiao wang du	1
 九龄书大字	jiu ling shu da zi	1
 其乐不可言	qi le bu ke yan	1
 更深月色半人家	geng shen yue se ban ren jia	1
@@ -9912,7 +9914,7 @@ sort: by_weight
 推心辅王政	tui xin fu wang zheng	1
 祗役出皇邑	zhi yi chu huang yi	1
 朝廷雇我作闲人	chao ting gu wo zuo xian ren	1
-骗了无涯过客	pian liao wu ya guo ke	1
+骗了无涯过客	pian le wu ya guo ke	1
 心如韩寿爱偷香	xin ru han shou ai tou xiang	1
 吾安得夫忘言之人而与之言哉	wu an de fu wang yan zhi ren er yu zhi yan zai	1
 谁知离别情	shei zhi li bie qing	1
@@ -11824,7 +11826,7 @@ sort: by_weight
 永诀从今始	yong jue cong jin shi	1
 风鸣两岸叶	feng ming liang an ye	1
 因甘野夫食	yin gan ye fu shi	1
-便做春江都是泪	bian zuo chun jiang du shi lei	1
+便做春江都是泪	bian zuo chun jiang dou shi lei	1
 谁能为此谋	shei neng wei ci mou	1
 西崦人家应最乐	xi yan ren jia ying zui le	1
 山鸡照影空自爱	shan ji zhao ying kong zi ai	1
@@ -11870,7 +11872,7 @@ sort: by_weight
 暮雨向三峡	mu yu xiang san xia	1
 语之而不惰者	yu zhi er bu duo zhe	1
 更绕衰丛一匝看	geng rao shuai cong yi za kan	1
-何必怀此都	he bi huai ci dou	1
+何必怀此都	he bi huai ci du	1
 直须看尽洛阳花	zhi xu kan jin luo yang hua	1
 毡幄掷卢忘夜睡	zhan wo zhi lu wang ye shui	1
 人老簪花不自羞	ren lao zan hua bu zi xiu	1
@@ -11998,7 +12000,7 @@ sort: by_weight
 何处营巢夏将半	he chu ying chao xia jiang ban	1
 赵王窃闻秦王善为秦声	zhao wang qie wen qin wang shan wei qin sheng	1
 城郭人民半已非	cheng guo ren min ban yi fei	1
-南都信佳丽	nan dou xin jia li	1
+南都信佳丽	nan du xin jia li	1
 香炉峰雪拨帘看	xiang lu feng xue bo lian kan	1
 明此以北面	ming ci yi bei mian	1
 生怕离怀别苦	sheng pa li huai bie ku	1
@@ -13362,7 +13364,7 @@ sort: by_weight
 艰难不敢料前期	jian nan bu gan liao qian qi	1
 梁间燕子闻长叹	liang jian yan zi wen chang tan	1
 安得倚天剑	an de yi tian jian	1
-则眸子了焉	ze mou zi le yan	1
+则眸子了焉	ze mou zi liao yan	1
 一叶随风忽报秋	yi ye sui feng hu bao qiu	1
 与君世世为兄弟	yu jun shi shi wei xiong di	1
 命灵氛为余占之	ming ling fen wei yu zhan zhi	1
@@ -13436,7 +13438,7 @@ sort: by_weight
 此情不可道	ci qing bu ke dao	1
 春早见花枝	chun zao jian hua zhi	1
 落花犹似坠楼人	luo hua you shi zhui lou ren	1
-交结五都雄	jiao jie wu dou xiong	1
+交结五都雄	jiao jie wu du xiong	1
 语来江色暮	yu lai jiang se mu	1
 万里经年别	wan li jing nian bie	1
 步出西城门	bu chu xi cheng men	1
@@ -13529,7 +13531,7 @@ sort: by_weight
 四十三年梦	si shi san nian meng	1
 萧萧枫树林	xiao xiao feng shu lin	1
 皎若太阳升朝霞	jiao ruo tai yang sheng zhao xia	1
-乙巳岁三月为建威参军使都经钱溪	yi si sui san yue wei jian wei can jun shi dou jing qian xi	1
+乙巳岁三月为建威参军使都经钱溪	yi si sui san yue wei jian wei can jun shi du jing qian xi	1
 繁中能薄艳中闲	fan zhong neng bao yan zhong xian	1
 与高适薛据登慈恩寺浮图	yu gao shi xue ju deng ci en si fu tu	1
 缘江路熟俯青郊	yuan jiang lu shu fu qing jiao	1

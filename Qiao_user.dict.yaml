@@ -1,0 +1,17 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# 於重新部署後生效
+#
+# 中英文混输词汇
+---
+name: Qiao_user
+version: "2021.8.24"
+sort: by_weight
+# use_preset_vocabulary: false
+...
+
+°	du	100
+0°	ling du	100
+优惠寄	you hui ji	100
+45°	si shi wu du	100

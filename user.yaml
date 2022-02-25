@@ -1,15 +1,9 @@
 var:
-  last_build_time: 1622702297
-  option:
-    simplification: true
+  last_build_time: 1645749321
   previously_selected_schema: Qiao_flypy
   schema_access_time:
-    Q_flypy: 1622426501
-    Qiao_flypy: 1622695385
-    clover: 1622690130
-    double_pinyin_flypy: 1622427521
-    english: 1618623648
-    japanese: 1622690042
-    luna_pinyin: 1619667126
-    luna_pinyin_simp: 1619667126
-    placeless_flypy: 1622508938
+    Qiao_flypy: 1645681095
+    japanese: 1645680863
+    luna_pinyin: 1644630327
+    sbxh: 1645497423
+    xklb: 1645680841

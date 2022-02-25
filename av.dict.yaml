@@ -1,0 +1,95 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# https://github.com/iDvel/rime-settings/
+#
+# 著名表演艺术家
+#
+---
+name: av
+version: "2021-11-20"
+sort: by_weight
+vocabulary: essay-zh-hans
+...
+# 简体和日文相同的：
+东凛
+山岸逢花
+通野未帆
+伊藤舞雪
+有坂深雪
+友田彩也香
+佐伯由美香
+藤森里穂
+河北彩花
+前田桃杏
+
+# 简体和日文不同的：
+# 在 opencc 中添加日文的映射，可以保证每次第一候选项为简体中文，第二候选项为日文。
+爱田飞鸟
+爱乃娜美
+安斋拉拉	an zhai la la
+苍井空
+长谷川理穗	chang gu chuan li hui
+彩美旬果	cai mei xun guo
+春咲凉	chun xiao liang
+蒂亚	di ya
+楪可怜	die ke lian
+妃悠爱
+枫花恋
+宫下华奈
+古川伊织
+广濑里绪菜
+河北春菜
+吉川莲
+吉泽明步
+铃村爱里
+凉森玲梦
+林由奈
+凛音桃花	lin yin tao hua
+里美尤利娅
+芦名尤莉亚
+美雪爱莉丝
+目黑惠
+明里䌷	ming li chou
+七海蒂娜	qi hai di na
+天海翼
+桃谷绘里香
+辻井穗乃果	shi jing hui nai guo
+桥本有菜
+深田咏美
+三上悠亚
+桃乃木香奈
+武藤绫香	wu teng ling xiang
+希岛爱理
+夏希栗
+希崎杰西卡	xi qi jie xi ka
+小泽玛利亚
+小岛南
+相泽南
+星宫一花
+星野景子
+星野娜美
+篠田步美	xiao tian bu mei
+柚木蒂娜	you mu di na
+有贺由爱
+乙白沙也加
+樱井步
+樱井彩
+樱空桃
+宇都宫紫苑	yu du gong zi yuan
+一之濑亚美莉
+樱木凛	ying mu lin
+园田美樱
+永野司
+早川濑里奈
+椎名由奈	zhi ming you nai
+竹内有纪
+乙石沙也加
+三宫椿
+蓝芽水月
+星野明
+莲实克蕾儿
+香苗玲音
+有原步美
+美谷朱里
+水川堇

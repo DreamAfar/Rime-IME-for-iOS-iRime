@@ -1,0 +1,15 @@
+# Rime dictionary
+# encoding: utf-8
+# vim: set noet:
+
+---
+name: japanese.kanji2
+version: 'v0.1-20210718'
+sort: by_weight
+...
+
+難	muzuka
+願	nega
+腹  naka
+救	kyuu
+話	hana

@@ -1,0 +1,94 @@
+# Rime extended dictionary
+# encoding: utf-8
+---
+name: xklb_user
+version: ""
+sort: original
+#sort: by_weight
+columns:
+  - text
+  - code
+  - stem
+  - weight
+...
+
+乛	ua
+乁	uaa
+乚	uaaa
+乀	uaaaa
+	uaaaaa
+	uaaaaaa
+彐	ub
+肀	ubi
+纟	uc
+巛	uca
+	ucaa
+辶	ud
+冖	uda
+讠	udaa
+礻	udo
+衤	udoo
+一	ue
+冂	uea
+罒	uee
+罓	ueu
+亠	uf
+冫	ufe
+丬	ufe
+疒	ufee
+丷	ug
+亻	uh
+乑	uho
+丨	ui
+匚	uia
+丂	uiaa
+亅	uii
+乂	uj
+乊	uju
+犭	uk
+勹	uka
+饣	ukaa
+	ukaaa
+夂	uko
+𥫗	ul
+乇	ula
+	ule
+攵	ulo
+彳	um
+彡	umu
+	umuu
+丒	un
+乆	uno
+丶	uo
+亍	uoi
+丆	up
+尢	upa
+丌	upi
+廾	upii
+	upu
+刂	uq
+钅	ur
+丄	ure
+虍	urea
+忄	us
+宀	usa
+灬	uso
+氵	ut
+	uto
+丿	uu
+扌	uue
+	uuu
+	uw
+乄	ux
+廴	uxo
+厶	uxoo
+	uxooo
+耂	uy
+丏	uya
+丗	uye
+覀	uyee
+丅	uyi
+阝	uz
+卩	uzi
+凵	uzii
+屮	uziii

@@ -1,38 +1,32 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.14.3
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Fri Nov 12 13:36:26 2021"
+  rime_version: 1.5.3
 patch:
-  schema_list:
-    - schema: Qiao_flypy # Qiaoの双拼
-    - schema: clover # 四叶草方案
-    - schema: japanese # 日语输入法
-    # - schema: double_pinyin_flypy     # 小鹤双拼
-    # - schema: luna_pinyin           # 朙月拼音
-    # - schema: luna_pinyin_simp      # 朙月拼音 简化字
-    - schema: flypy
-    # - schema: placeless_flypy         # 小鹤双拼+          
-
   menu:
-    # alternative_select_labels: [ ①, ②, ③, ④, ⑤, ⑥, ⑦, ⑧, ⑨ ]  # 修改候选标签
-    # alternative_select_keys: ASDFGHJKL #如编码字符占用数字键，则须另设选字键
-    page_size: 5 #候选词每页显示个数
-  switcher:
-    hotkeys:
-      - "Control+grave" # 注意是control+`，不是command+`
-    # abbreviate_options: false  # true或false
-    # caption: "【 输入法设置 】"
-    # option_list_separator: "｜"
+    page_size: 5
 
-  #-----------------------------------------------
-  # 中英文切换自定义
-  #-----------------------------------------------
-  # inline_ascii  在输入法的临时英文编辑区内输入字母，数字，符号，空格等，回车上屏后自动复位到中文
-  # commit_text   已输入的候选文字上屏并切换至英文输入模式
-  # commit_code   已输入的编码字符上屏并切换至英文输入模式
-  # -----------------------------------------------
-  # 参考链接： https://gist.github.com/lotem/2981316
+  schema_list:
+    - {schema: Qiao_flypy}
+    - {schema: japanese}
+    # - {schema: easy_en}
+    # - {schema: Qiao_pinyin}
+    # - {schema: sbxh}
+    # - {schema: pinyin_simp}
+    # - {schema: xkjd6}
+    # - {schema: double_pinyin_flypy}
+    # - {schema: luna_pinyin}
+    - {schema: xklb}
+    # - {schema: xklb_dz}
+  switcher:
+    hotkeys: ["Control+grave"]
 
   recognizer:
     import_preset: default
     patterns:
-      reverse_lookup: "`[a-z]*'?$"
+      # reverse_lookup: "`[a-z]*'?$"
       uppercase: "" #中文状态大写锁定直接上屏
 
   ascii_composer:
@@ -45,83 +39,3 @@ patch:
       Control_L: noop
       Control_R: noop
       Eisu_toggle: clear
-
-  "key_binder/bindings": # 设置哪些键可以翻页，需要哪个取消注释即可
-    # 自定义
-
-    # - { when: has_menu, accept: "#", toggle: emoji_suggestion } # 在输入过程中，切换Emoji开关的快捷键，这里用#号切换
-    # - { when: has_menu, accept: "F6", toggle: emoji_suggestion } # window10在输入过程中，用F6快捷键，切换Emoji开关
-
-    # - { when: has_menu, accept: semicolon, send: 2 } # ；分号次选
-    #  - {accept: Release+semicolon, send: semicolon, when: has_menu} #如启用此行，分号引导功能无效
-    - { when: composing, accept: "Shift_R", send: Escape }
-    - { when: always, accept: "Shift+space", toggle: full_shape } #切换全半角
-    - { when: always, accept: "Control+period", toggle: ascii_punct } #切换中英标点
-    # - {when: has_menu, accept: space, send: space}      #针对候选时，作用空格
-    # - {when: composing, accept: space, send: Return}    #有输入码时，回车清编码
-    - { accept: "Control+j", toggle: simplification, when: has_menu } #切换简繁
-
-    # 候选词用"-"、"=的方式进行分页:
-
-    - { when: has_menu, accept: minus, send: Page_Up } # 减号等号翻页
-    - { when: has_menu, accept: equal, send: Page_Down } # 减号等号翻页
-
-    # 候选词用"，"、"。"符号的方式分页:
-
-    # - { when: paging, accept: comma, send: comma } #注销逗号翻页
-    # - { when: has_menu, accept: period, send: period } #注销句号翻页
-    # - { when: paging, accept: comma, send: Page_Up } #逗号翻页
-    # - { when: has_menu, accept: period, send: Page_Down } #句号翻页
-
-    # 候选词用{符号、}符号的方式分页:
-
-    - { when: paging, accept: bracketleft, send: Page_Up }  # [上翻页
-    - { when: has_menu, accept: bracketright, send: Page_Down }  # ]下翻页
-
-    # emacs_编辑:
-
-    - { when: composing, accept: Control+p, send: Up }
-    - { when: composing, accept: Control+n, send: Down }
-    - { when: composing, accept: Control+b, send: Left }
-    - { when: composing, accept: Control+f, send: Right }
-    - { when: composing, accept: Control+a, send: Home }
-    - { when: composing, accept: Control+e, send: End }
-    - { when: composing, accept: Control+d, send: Delete }
-    - { when: composing, accept: Control+k, send: Shift+Delete }
-    - { when: composing, accept: Control+h, send: BackSpace }
-    - { when: composing, accept: Control+g, send: Escape }
-    - { when: composing, accept: Control+bracketleft, send: Escape }
-    - { when: composing, accept: Alt+v, send: Page_Up }
-    - { when: composing, accept: Control+v, send: Page_Down }
-
-    # move_by_word_with_tab:
-
-    - { when: composing, accept: ISO_Left_Tab, send: Shift+Left }
-    - { when: composing, accept: Shift+Tab, send: Shift+Left }
-    - { when: composing, accept: Tab, send: Shift+Right }
-
-    # numbered_mode_switch:
-
-    - { when: always, accept: "Control+Shift+1", select: .next } #前后输入方案切换
-    - { when: always, accept: "Control+Shift+2", toggle: simplification } #切换简繁
-    # - { when: always, accept: "Control+Shift+3", toggle: emoji_suggestion } # emoji切换显示
-    - { when: always, accept: "Control+Shift+4", toggle: symbol_support } # symbol切换显示
-    - { when: always, accept: "Control+Shift+5", toggle: ascii_punct } #切换中英标点
-    - { when: always, accept: "Control+Shift+6", toggle: full_shape } #全角半角切换
-    - { when: always, accept: "Control+Shift+exclam", select: .next } #前后输入方案切换
-    - { when: always, accept: "Control+Shift+at", toggle: simplification } #切换简繁
-    # - { when: always, accept: "Control+Shift+numbersign", toggle: emoji_suggestion } # emoji切换显示
-    - { when: always, accept: "Control+Shift+dollar", toggle: symbol_support } # symbol切换显示
-    - { when: always, accept: "Control+Shift+percent", toggle: ascii_punct } #切换中英标点
-    - { when: always, accept: "Control+Shift+asciicircum", toggle: full_shape } #全角半角切换
-
-    #windows_compatible_mode_switch:
-
-    - { when: always, accept: Shift+space, toggle: full_shape } # Shift+space（空格）全角半角切换
-    - { when: always, accept: Control+comma, toggle: ascii_punct } # Ctrl+, 切换中英标点
-    - { when: always, accept: Control+period, toggle: ascii_punct } # Ctrl+。 切换中英标点
-    - { when: always, accept: "Control+Shift+f", toggle: simplification }   #切换简繁
-    - { when: always, accept: "Control+Shift+F", toggle: simplification }   #切换简繁
-
-    # kp_enter_is_return:
-    - { when: has_menu, accept: KP_Enter, send: Return }

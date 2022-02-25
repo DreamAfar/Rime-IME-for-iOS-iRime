@@ -1,0 +1,52 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# 於重新部署後生效
+#
+# 英文混输词汇
+---
+name: easy_en_user
+version: "2021.8.24"
+sort: by_weight
+# use_preset_vocabulary: false
+...
+writer	writer	100
+notebook	notebook	100
+object	object	100
+person	person	100
+KeePass	keepass	100
+Array	array	100
+ArrayList	arraylist	100
+Hello	hello	100
+HelloWorld	helloworld	100
+Integer	integer	100
+Function	function	100
+apply	apply	100
+lambda	lambda	100
+Update	update	100
+Gitee	gitee	100
+Gitlab	gitlab	100
+SuperMemo	supermemo	100
+Dream	dream	100
+Afar	afar	100
+studend	student	100
+age	age	100
+class	class	100
+table	table	100
+key	key	100
+references	references	100
+int	int	100
+into	into	100
+modify	modify	100
+number	number	100
+values	values	100
+database	database	100
+show	show	100
+Retrieve	retrieve	100
+Create	create	100
+select	select	100
+username	username	100
+username	username	100
+PASSWORD	password	100
+password	password	100
+birthday	birthday	100

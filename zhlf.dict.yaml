@@ -1,0 +1,77 @@
+---
+name: zhlf
+version: "1.0"
+sort: original
+columns:
+  - text
+  - code
+  - weight
+  - stem
+encoder:
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaAbBaCa"
+    - length_in_range: [4, 10]
+      formula: "AaBaCaZa"
+...
+丷	ba
+𤼙	bing
+𧄶	cao
+𨏷	che
+丶	dian
+実	gai
+𢌕	guang
+一	heng
+炼	huo
+圝	kou
+𫝜	kou
+鹸	lu
+験	ma
+𨷻	men
+検	mu
+牜	niu
+𡤣	nv
+丬	pan
+丿	pie
+㰸	qian
+亻	ren
+𠈫	ren
+𩙿	shi
+扌	shou
+𢺈	shou
+丨	shu
+氵	shui
+𣹸	shui
+𤅇	shui
+纟	si
+练	si
+羉	si
+𫝔	tu
+亠	ver
+𬯨	ver
+㪘	wen
+忄	xin
+乀	yi
+乁	yi
+乙	yi
+乚	yi
+乛	yi
+亅	yi
+𠃉	yi
+𠃊	yi
+𠃋	yi
+𠃌	yi
+𠃍	yi
+𠃑	yi
+𠄌	yi
+𠄎	yi
+𧝢	yi
+𦣋	yue
+𦣐	yue
+𥫗	zhu
+𥬟	zhu
+𧽎	zou
+𧾷	zu
+𨇼	zu

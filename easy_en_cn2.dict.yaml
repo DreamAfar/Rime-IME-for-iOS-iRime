@@ -1,0 +1,1444 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# 於重新部署後生效
+#
+# 英文混输词汇
+name: easy_en_cn2
+version: "2021.8.24"
+sort: by_weight
+use_preset_vocabulary: false
+...
+
+Trime	trime
+3Dmax	3dmax
+AAC	aac
+AAX	aax
+OK	ok
+No	no
+Love	love
+ABC	abc
+ABT	abt
+AC	ac
+Acer	acer
+AcFun	acfun
+ACOME	acome
+ACT	act
+Adblock	adblock
+Adidas	adidas
+Adobe Illustrator	adobeillustrator
+Adobe Photoshop	adobephotoshop
+ADSL	adsl
+AFP	afp
+After Effects	aftereffects
+Afterlight	afterlight
+AGP	agp
+AGPS	agps
+AIDS	aids
+AIFF	aiff
+AIIB	aiib
+Air Display	airdisplay
+Air Video	airvideo
+AirDroid	airdroid
+AirDrop	airdrop
+airFiber	airfiber
+Airmail	airmail
+airMAX	airmax
+AirPlay	airplay
+AirPods	airpods
+AirPods Pro	airpods
+AirPort	airport
+AirPort Express	airport
+AirPort Extreme	airport
+AirPower	airpower
+AirPrint	airprint
+airPrism	airprism
+AirServer	airserver
+AirTag	airtag
+AIYA	aiya
+AK47	ak4
+AkelPad	akelpad
+Al Nile	alnile
+Al Tarikh	altarikh
+Alam	alam
+AlBayan	albayan
+Alemania	alemania
+Alina	alina
+Alisa	alisa
+Alphabet	alphabet
+Alt	alt
+Amanat	amanat
+Amani	amani
+Amazon Cloud Drive	acd
+Amazon Fire	amazonfire
+AmazonBasics	amazonbasics
+AMD	amd
+AMOLED	amoled
+Amphetamine	amphetamine
+AmpliFi	amplifi
+Andale Mono	andalemono
+Android	android
+Angelababy	angelababy
+Animoji	animoji
+Annotable	annotable
+Ansible	ansible
+ANSYS	ansys
+AnyConnect	anyconnect
+AnyDrop	anydrop
+AOL	aol
+APC	apc
+APEC	apec
+APFS	apfs
+API	api
+APP	app
+App Clips	appclips
+App Store	appstore
+AppFridays	appfridays
+Apple	apple
+Apple Beta	applebeta
+Apple Chancery	applechancery
+Apple Configurator	appleconfigurator
+Apple Developer	appledeveloper
+Apple EarPods	appleearpods
+Apple File System	apfs
+Apple ID	appleid
+Apple Lossless	applelossless
+Apple Music	applemusic
+Apple News	applenews
+Apple Pay	applepay
+Apple Pencil	applepencil
+Apple Remote	appleremote
+Apple Store	applestore
+Apple TV	appletv
+Apple Watch	applewatch
+AppleCare	applecare
+AppleCare+	applecare
+AppleScript	applescript
+AppleTalk	appletalk
+Apps	apps
+AppShopper	appshopper
+AppStore	appstore
+AptBackup	aptbackup
+ARASHI	arashi
+Arduino	arduino
+Arial	arial
+Arial Black	arialblack
+Arial Narrow	arialnarrow
+Arial Rounded	arialrounded
+Arial Unicode	arialunicode
+Armani	armani
+ARP	arp
+ARPG	arpg
+ASCII	ascii
+ASOS	asos
+ASP	asp
+aText	atext
+Athelas	athelas
+ATI	ati
+ATM	atm
+AutoCAD	autocad
+Automator	automator
+Auxo	auxo
+AVG	avg
+AVI	avi
+Avril	avril
+Axure	axure
+Ayuthaya	ayuthaya
+AZW	azw
+Backspace	backspace
+BADA	bada
+Badoo	badoo
+Baidu	baidu
+BAKA	baka
+Bambook	bambook
+Bangla	bangla
+Baru	baru
+Baskerville	baskerville
+Bazinga	bazinga
+BBC	bbc
+BBEdit	bbedit
+Bbox	bbox
+Beautyleg	beautyleg
+BeDook	bedook
+BEELY	beely
+Belieber	belieber
+Better Rename	betterrename
+BetterTouchTool	btt
+BetterZip	betterzip
+Beyond Compare	beyondcompare
+BFR	bfr
+Bieber	bieber
+Big Sur	bigsur
+Bigbang	bigbang
+BigCaslon	bigcaslon
+BIO	bio
+BIOS	bios
+Bitcron	bitcron
+BitDefender	bitdefender
+BitLocker	bitlocker
+BlackBerry	blackberry
+Blizzard	blizzard
+Bluetooth	bluetooth
+BMP	bmp
+BMW	bmw
+Bodoni	bodoni
+BoldItalic	bolditalic
+Bose soundlink	bosesoundlink
+Brackets	brackets
+Bradley Hand	bradleyhand
+Brush Script	brushscript
+BTW	btw
+BUG	bug
+Bug	bug
+Buka	buka
+BundleHunt	bundlehunt
+Bypass	bypass
+Byword	byword
+C++	cpp
+CAD	cad
+Calcbot	calcbot
+Calibre	calibre
+Calibri	calibri
+CallMaster	callmaster
+Camille	camille
+CAPCOM	capcom
+CarPlay	carplay
+Casio	casio
+CATIA	catia
+CBA	cba
+CBD	cbd
+Cbox	cbox
+CCED	cced
+CCTV	cctv
+CDKEY	cdkey
+CDMA	cdma
+CDN	cdn
+CELINE	celine
+CentOS	centos
+CEO	ceo
+CFPL	cfpl
+CGI	cgi
+ChaCha	chacha
+Chalkboard	chalkboard
+Chalkduster	chalkduster
+CheatSheet	cheatsheet
+ChemBioDraw	chembiodraw
+ChinaNet	chinanet
+Chinaren	chinaren
+Choco	choco
+ChoiSin	choisin
+CHOK	chok
+Chrome	chrome
+Cisco IPSec	ciscoipsec
+Clannad	clannad
+CloudApp	cloudapp
+CloudMagic	cloudmagic
+CMCC	cmcc
+Cmd	cmd
+CMNET	cmnet
+CMOS	cmos
+CMWAP	cmwap
+cnBeta	cnbeta
+CNBlue	cnblue
+CND	cnd
+CNN	cnn
+CNTV	cntv
+Cochin	cochin
+Cocoa Touch	cocoatouch
+CodeBox	codebox
+CodeKit	codekit
+CodeRunner	coderunner
+CoffeeScript	coffeescript
+ColorSchemer	colorschemer
+ColorSnapper	colorsnapper
+Combat Power	combatpower
+Comic Sans MS	comicsansms
+Completedir	completedir
+Cond	cond
+ConTEXT	context
+Control Center	controlcenter
+Coolpad	coolpad
+Copperplate	copperplate
+CorelDraw	coreldraw
+Cornerstone	cornerstone
+Corsiva	corsiva
+Cortana	cortana
+CounterStrike	counterstrike
+Courier New	couriernew
+CPA	cpa
+CPU	cpu
+Crimson Editor	crimsoneditor
+CRT	crt
+CSOL	csol
+CSS	css
+CTO	cto
+Ctrl	ctrl
+Cuban	cuban
+CUCCI	cucci
+Curio	curio
+Cydia	cydia
+DailyCost	dailycost
+DaisyDisk	daisydisk
+Dashboard	dashboard
+Datagraph	datagraph
+DataMeter	datameter
+Davichi	davichi
+Day One	dayone
+DDoS	ddos
+DDR	ddr
+Delete	del
+Delete	delete
+Devanagari	devanagari
+Developer Preview	developerpreview
+DEVONthink	devonthink
+DevOps	devops
+DFU	dfu
+DHCP	dhcp
+DHL	dhl
+Dicos	dicos
+Didot	didot
+DIN Alternate	dinalternate
+DIN Condensed	dincondensed
+Diors	diors
+DirectX	directx
+Disk Utility	diskutility
+DiskMaker	diskmaker
+DisplayPort	displayport
+Diumoo	diumoo
+Diwan Kufi	diwankufi
+Diwan Thuluth	diwanthuluth
+DIY	diy
+DJI	dajiang
+DJI	dji
+D-Link	dlink
+DMAX	dmax
+DNA	dna
+DNS	dns
+DOC	doc
+DOCX	docx
+Doin	doin
+DOMO	domo
+Doov	doov
+DOS	dos
+Double Tour	doubletour
+DOWN	down
+DPS	dps
+Drafts	drafts
+DreamAfar	deramafar
+Dreammail	dreammail
+Dribbble	dribbble
+Dropbox	dropbox
+Droplr	droplr
+Dropshare	dropshare
+Dropzone	dropzone
+DTS	dts
+Due	due
+DUEBA	dueba
+DVD	dvd
+DVI	dvi
+DynamicLyrics	dynamiclyrics
+Dyson	dyson
+EarPods	earpods
+Eason	eason
+Easou	easou
+Easytime	easytime
+eBay	ebay
+EdgePoint	edgepoint
+EdgeRouter	edgerouter
+EdgeSwitch	edgeswitch
+EditPad lite	editpadlite
+EditPlus	editplus
+eDRAM	edram
+EDXOR	edxor
+EHQ	ehq
+El Capitan	elcapitan
+Elina	elina
+Elly	elly
+Elpass	elpass
+Emacs	emacs
+EMAIL	email
+Eminem	eminem
+Emmet	emmet
+Emoji	emoji
+Enemies	enemies
+english english 100	englishenglish10
+Entel	entel
+ePub	epub
+eSATA	esata
+eSIM	esim
+ESPN	espn
+Etam	etam
+ETC	etc
+Etude	etude
+EuphemiaCAS	euphemiacas
+EVA	eva
+EVD	evd
+EV-DO	evdo
+Evernote	evernote
+Evo	evo
+EXE	exe
+ExFAT	geshihua
+ExtraLight	extralight
+Ezra	ezra
+Face ID	faceid
+Facebook	facebook
+FaceTime	facetime
+Fantastical	fantastical
+FAQ	faq
+Farah	farah
+Farisi	farisi
+FAT	fat
+FAT16	fat1
+FAT32	fat
+Ferragamo	ferragamo
+FESCO	fesco
+FIFA	fifa
+FILA	fila
+FileBrowser	filebrowser
+FileVault	filevault
+Final Cut Pro	finalcutpro
+FineReader	finereader
+Firefox	firefox
+FireWire	firewire
+FLASHFXP	flashfxp
+Flickr	flickr
+Flipboard	flipboard
+Focus Pixels	focuspixels
+Followers	followers
+FontAwesome	fontawesome
+Foobar2000	foobar
+Force Touch	forcetouch
+Forecast	forecast
+ForkLift	forklift
+Foxconn	foxconn
+Foxmail	foxmail
+FPE	fpe
+FPS	fps
+Frank DeLoupe	frankdeloupe
+FrontPage	frontpage
+FTIsland	ftisland
+FTP	ftp
+Fura Code	furacode
+Fura Mono	furamono
+Furla	furla
+Fusion Drive	fusiondrive
+Futura	futura
+Game Center	gamecenter
+GaN	gan
+GarageBand	garageband
+GATSBY	gatsby
+GBA	gba
+GBK	gbk
+GBoard	gboard
+GDP	gdp
+Geekbench	geekbench
+Genius Bar	geniusbar
+Gestimer	gestimer
+GFW	gfw
+GhostNote	ghostnote
+GhostTile	ghosttile
+GHz	ghz
+GIF	gif
+Gif Brewery	gifbrewery
+GillSans	gillsans
+GIMP	gimp
+GitHub	github
+GitHub Gist	github
+Gitter	gitter
+GLONASS	glonass
+Gmail	gmail
+Gneo	gneo
+GNU	gnu
+Go2Shell	gotushell
+GoAgent	goagent
+GoagentX	goagentx
+GOM Player	gomplayer
+GoodReader	goodreader
+Google	google
+Google Analytics	GoogleAnalytics
+Google Chrome	google
+Google Docs	googledocs
+Google Drive	googledrive
+Google Keep	googlekeep
+Google Maps	googlemaps
+Google Music	googlemusic
+Google Play	googleplay
+Google Slides	googleslides
+GooglePlay	googleplay
+GoPro	gopro
+GOSICK	gosick
+Gougou	gougou
+Gozo	gozo
+GPRS	gprs
+GPS	gps
+GPU	gpu
+Graffle	graffle
+GRE	gre
+Great Ball	greatball
+GSM	gsm
+GSW	gsw
+GTR	gtr
+Gucci	gucci
+GUI	gui
+Gujarati	gujarati
+Gurmukhi	gurmukhi
+H&M	hm
+HanaMin	hanamin
+Handoff	hangoff
+Hangouts	hangouts
+HarmonyOS	hm
+Haru	haru
+HDMI	hdmi
+HDR	hdr
+HDTV	hdtv
+HE-AAC	heaac
+HeavyItalic	heavyitalic
+Hellen	hellen
+HelloKitty	hellokitty
+Herculanum	herculanum
+Hermès	hermes
+HEVC	hevc
+HHKB	hhkb
+HIEF	hief
+HIFI	hifi
+High Sierra	highsierra
+HiRise	hirise
+HITA	hita
+Hitomi	hitomi
+HIV	hiv
+HK	hk	10001
+Hoefler Text	hoeflertext
+Holle	holle
+HoloLens	hololens
+Homebrew	homebrew
+HomeKit	homekit
+HomePod	homepod
+Hong Kong	hk	10000
+Hongkong	hongkong
+HOSTS	hosts
+Hotmail	hotmail
+Hotwind	hotwind
+Houdini	houdini
+HSPA	hspa
+HTC	htc
+HTC Vive	htc
+HTCOne	htcone
+HTML	html
+HTML5	htmlwu
+HTTP	http
+HTTPS	https
+HUAWEI	huawei
+Hulu	hulu
+Hurstville	hurstville
+Hyper Potion	hyperpotion
+iA Writer	iawriter
+iBeacon	ibeacon
+IBM	ibm
+iBooks	ibooks
+iBooks Author	ibooks
+ICBC	icbc
+iCloud	icloud
+iCloud Drive	iclouddrive
+Icons8 App	iconsba
+ICQ	icq
+IDE	ide
+IEEE	ieee
+iExplorer	iexplorer
+iFFmpeg	iffmpeg
+iFile	ifile
+iFixit	ifixit
+IFTTT	ifttt
+Ikan	ikan
+IKEA	ikea
+IKEv2	ikever
+Ikki	ikki
+iKlear	iklear
+iMac	imac
+iMac Pro	imac
+ImageOptim	imageoptim
+IMAP	imap
+IMAX	imax
+iMazing	imazing
+IMDb	imdb
+IME	ime
+IMEI	imei
+iMessage	imessage
+iMessages	imessages
+iMore	imore
+iMovie	imovie
+IMSI	imsi
+InaiMathi	inaimathi
+Inconsolata	inconsolata
+Infographics	infographics
+infoQ	infoq
+Ingress	ingress
+Innisfree	innisfree
+InsomniaX	insomniax
+Instacast	instacast
+Instaframe Pro	instaframe
+Instagram	instagram
+Instashare	instashare
+Intel	intel
+Intel Core	intelcore
+Intellij IDEA	intellijidea
+Internet	internet
+Internet Explorer	internetexplorer
+intoLive	intolive
+Ion-X	ionx
+iOS	ios
+IP	ip
+iPack	ipack
+iPad	ipad
+iPad Air	ipad
+iPad mini	ipad
+iPad Pro	ipad
+iPadOS	ipad
+iPerf	iperf
+iPhone	iphone
+IPN	ipn
+iPod	ipod
+iPod classic	ipod
+iPod mini	ipod
+iPod nano	ipod
+iPod shuffle	ipod
+iPod touch	ipod
+IPS	ips
+IPSA	ipsa
+IPTV	iptv
+IPv4	ipv
+IPv6	ipv
+iReader	ireader
+iRime	irime
+ISDN	isdn
+iSee	isee
+iSight	isight
+Islamic	islamic
+ISO	iso
+ISP	isp
+iStat Menus	istatmenus
+iTerm	iterm
+iThoughtsX	ithoughts
+iTouch	itouch
+iTunes	itunes
+iTunes Connect	itunesconnect
+iTunes Match	itunesmatch
+Ive	ive
+iWatch	iwatch
+iWork	iwork
+J2EE	jtee
+Jailbreak	jailbreak
+Java	java
+JavaScript	javascript
+Jay	jay
+jEdit	jedit
+JetBrains	jetbrains
+Jizz	jizz
+JOE	joe
+JOJO	jojo
+JPEG	jpeg
+JPG	jpg
+jQuery	jquery
+JS Blocker	jsblocker
+JSLint	jslint
+JSP	jsp
+JUNIEL	juniel
+JUSCO	jusco
+Just Mobile	justmobile
+Kailasa	kailasa
+Kaleidoscope	kaleidoscope
+Karabiner	karabiner
+Karicare	karicare
+Kary	kary
+Kass	kass
+Kazaky	kazaky
+Kbps	kbps
+Kefa	kefa
+Keka	keka
+Kenn	kenn
+Keroro	keroro
+Keyboard Maestro	keyboardmaestro
+Keycard	keycard
+KeyCue	keycue
+KFC	kfc
+Kian	kian
+Kile	kile
+Kimi	kimi
+Kimmy	kimmy
+Kindle	kindle
+Kindle Format	kindle
+Kindle Oasis	kindle
+Kindle Paperwhite	kindle
+Kindle Unlimited	kindle
+Kindle Voyage	kindle
+Klib	klib
+KMail	kmail
+Kodi	kodi
+Koei	koei
+KOEI	koei
+KOF	kof
+Kokonor	kokonor
+KONAMI	konami
+Kone	kone
+Konka	konka
+Konqueror	konqueror
+Krita	krita
+Krungthep	krungthep
+KTV	ktv
+Kuma	kuma
+KUSO	kuso
+L2TP	lrtp
+Lacie	lacie
+LadyGaga	ladygaga
+LaLa	lala
+LALABOBO	lalabobo
+LaTeXian	latexian
+Launch Center Pro	lcp
+Launchpad	launchpad
+Lavida	lavida
+LBS	lbs
+LCD	lcd
+LED	led
+Lenka	lenka
+Lenovo	lenovo
+Les	les
+Letv	letv
+Lexar	lexar
+Lexi	lexi
+LibreOffice	libreoffice
+Liekkas	liekkas
+LightItalic	lightitalic
+Lightning	lightning
+Lilin	lilin
+Limi	limi
+LinkinPark	linkinpark
+Linsanity	linsanity
+Linux	linux
+LiteBeam	litebeam
+Little Snitch	littlesnitch
+Live Cams Pro	livecamspro
+Live Photo	livephoto
+LiveReload	livereload
+LMFAO	lmfao
+Local Client	localclient
+LockScreen	lockscreen
+LOFTER	lofter
+LOGO	logo
+LOL	lol
+Longchamp	longchamp
+Ltd	ltd
+LTE	lte
+LTPO OLED	oled
+Lucky Egg	luckyegg
+Luka	luka
+Lumia	lumia
+Luminari	luminari
+Lure Module	luremodule
+Mac	mac
+Mac App Store	mas
+Mac mini	macmini
+Mac Pro	macpro
+Mac Rumors	macrumors
+MacAppDeals	macappdeals
+MacBook	macbook
+MacBook Air	macbook
+MacBook Pro	macbook
+MacID	macid
+macOS	macos
+macOS Catalina	macos
+macOS High Sierra	macos
+macOS Mojave	macos
+MacTips	mactips
+Mactracker	mactracker
+Mad Catz	madcatz
+Magic Keyboard	magickeyboard
+Magic Mouse	magicmouse
+Magic Mouse 2	magicmouse
+Magic Trackpad	magictrackpad
+Magic Trackpad 2	magictrackpad
+MagSafe	magsafe
+Mailbox	mailbox
+MailTags	mailtags
+MAMP PRO	mamppro
+Mandy	mandy
+Manico	manico
+MarginNote	marginnote
+MariaDB	maria
+MarkDown	markdown
+MarkEditor	markeditor
+MarsEdit	marsedit
+MaterialIcons	materialicons
+Mathtype	mathtype
+MATLAB	matlab
+Maya	maya
+Maybank	maybank
+MAYU	mayu
+MBA	mba
+MBLAQ	mblaq
+Mbps	mbps
+McDonald	mcdonald
+MediumItalic	mediumit
+Memoji	memoji
+MERS	mers
+Messi	messi
+Metapad	metapad
+Mextures	mextures
+Mia	mia
+Micheal	micheal
+Michelle	michelle
+Micro SD	microsd
+Micro-SIM	microsim
+Microsoft	microsoft
+Microsoft Office	microsoftoffice
+Microsoft Word	microsoftword
+Mido	mido
+MiGo	migo
+Miki	miki
+Mima	mima
+MindNode	mindnode
+Minecraft	minecraft
+Mini DisplayPort	mdp
+Minoz	minoz
+MIPS	mips
+Misaki	misaki
+Mishafi	mishafi
+Mishafi Gold	mishafigold
+Missha	missha
+Mission Control	missioncontrol
+MIT	mit
+MitM	mitm
+MIUI	miui
+Mixx	mixx
+Miya	miya
+MOBI	mobi
+Mobile Mouse	mobilemouse
+Mojave	mojave
+MOKA	moka
+Moke	moke
+MOLANG	molang
+Moncler	moncler
+Money Monitor	moneymonitor
+MoneyWiz	moneywiz
+Monstar	monstar
+Mook	mook
+Moom	moom
+Mountie	mountie
+Moves	moves
+Movist	movist
+Mozilla	mozilla
+MP3	mp
+MPEG	mpeg
+MPlayer	mplayer
+MplayerX	mplayer
+Mrs	mrs
+MSDN	msdn
+Mshtakan	mshtakan
+MSN	msn
+mStand	mstand
+MTU	mtu
+MTV	mtv
+MUJI	muji
+Multi-Touch	multitouch
+Muna	muna
+MVP	mvp
+MyriadPro	myriadpro
+MySQL	mysql
+myTV SUPER	mytv
+Nadeem	nadeem
+Nan	nan
+Nano	nano
+NanoBeam	nanobeam
+Nano-SIM	nanosim
+Nars	nars
+NAS	nas
+NAT	nat
+NAVER	naver
+NBA	nba
+NDS	nds
+NEdit	nedit
+NeoeEdit	neoeedit
+NetBIOS	netbios
+Netflix	netflix
+Netpadd	netpadd
+Neway	neway
+NewPeninim	newpeninim
+NFC	nfc
+NFO	nfo
+NGC	ngc
+NGO	ngo
+Niantic	niantic
+nice	nice
+Nichkhun	nichkhun
+NICI	nici
+Nightwish	nightwish
+NIKE	nike
+Niko	niko
+Nikon	nikon
+NMD	nmd
+NOD	nod
+Noizio	noizio
+Nokia	nokia
+Notability	notability
+Notepad	notepad
+Notepad++	notepad
+NoteTab	notetab
+NPC	npc
+nPlayer	nplayer
+NTFS	ntfs
+NuPro	nupro
+nvALT	nvalt
+Nvidia	nvidia
+OAOA	oaoa
+Objective-C	objective
+OCR	ocr
+Oct	oct
+Oculus	oculus
+Oculus Rift	oculus
+Oculus VR	oculus
+OEM	oem
+OFFICE	office
+OfficeSuite	officesuite
+Old	old
+OLED	oled
+Olympics	olymipcs
+Omegle	omegle
+OMG	omg
+OmmWriter	ommwriter
+OmniFocus	omnif
+OmniGraffle	omnig
+OmniOutliner	omnio
+OmniPlan	omniplan
+OneDrive	onedrive
+OneNote	onenote
+ONS	ons
+OnyX	onyx
+OpenVPN	openvpn
+OPPO	oppo
+Oracle Database	oracledatabase
+Oriya	oriya
+OS X	osx
+OS X Server	osxserver
+OST	ost
+OTA	ota
+OTC	otc
+OTG	otg
+OUTLETS	outlets
+Outlook Express	outlookexpress
+P2P	p2p
+Pabo	pabo
+Pages	pages
+PaintCode	paintcode
+Panasonic	panasonic
+Parallels Desktop	parallelsdesktop
+Pastebot	pastebot
+Paw	paw
+PayPal	paypal
+PC-cillin	pccillin
+Pchy	pchy
+PDA	pda
+PDF	pdf
+PDF Expert	pdfexpert
+Perl	perl
+Photo Booth	photobooth
+PhotoDesk	photodesk
+Photoshop	photoshop
+PHP	php
+PhpStorm	phpstorm
+Picatext	picatext
+Pico	pico
+Pikachu	pikachu
+PIKO	piko
+Ping Hei	pinghei
+PingWest	pingwest
+Pixave	pixave
+Pixelmator	pixelmator
+Pixiv	pixiv
+Play by Play	playbyplay
+PlayStation	playstation
+PlistEdit	plistedit
+PLMM	plmm
+PLORY	plory
+Plurk	plurk
+PNG	png
+Poké Ball	pokeball
+Pokémon	pokemon
+Pokémon GO	pokemongo
+Pokétop	poketop
+POP	pop
+PopClip	popclip
+Poppin	poppin
+Popstar	popstar
+POS	pos
+Potion	potion
+POWER UP	powerup
+PowerBeam	powerbeam
+PowerPack	powerpack
+PowerPoint	powerpoint
+PPPoE	pppoe
+PPT	ppt
+PPTV	pptv
+Prada	prada
+PragmataPro	pragmatapro
+PRAM	pram
+PRC	prc
+Prezi	prezi
+PRICH	prich
+Prisma	prisma
+Privoxy	privoxy
+Pro	pro
+Promotee	promotee
+Proxifier	proxifier
+Proxy Group	proxygroup
+PS2	ps
+PSP	psp
+PSPad	pspad
+PSV	psv
+PTMono	ptmono
+PTSans	ptsans
+PTSerif	ptserif
+Public Beta	publicbeta
+PuTTY	putty
+PVC	pvc
+PyCharm	pycharm
+QAQ	qaq
+QQ	qq
+QQGame	qqgame
+QuickTime	quicktime
+QuickTime Player	quicktimeplayer
+QuickType	quicktype
+Quiver	quiver
+QVOD	qvod
+QZZN	qzzn
+Raanana	raanana
+Radeon Pro	radeonpro
+Rails	rails
+Rainie	rainie
+RAM	ram
+RAR	rar
+Razz Berry	razzberry
+Rdio	rdio
+Readability	readability
+Readkit	readkit
+RealPlayer	realplayer
+Reeder	reeder
+RegularItalic	regularitalic
+Regulex	regulex
+Remote Client	remoteclient
+RescueTime	rescuetime
+Resilio Sync	resiliosync
+Results	results
+RexEdit	rexedit
+RGB	rgb
+RightFont	rightfont
+Rihanna	rihanna
+Rime	rime
+RIO	rio
+RIP	rip
+RMB	rmb
+RMVB	rmvb
+RobotoSlab	robotoslab
+RocketDish	rocketdish
+Roem	roem
+ROM	rom
+RoRo	roro
+RPG	rpg
+RSS	rss
+RTA	rta
+RTSP	rtsp
+Ruby	ruby
+Ruby on Rails	ror
+RubyMine	rubymine
+RunningMan	runningman
+Runtastic Pro	runtasticpro
+RURU	ruru
+Rust	rust
+RWBY	rwby
+Sabrent USB	sabrentusb
+Safari	safari
+Safari View Controller	safariviewcontroller
+Sammi	sammi
+Samsung	samsung
+SANA	sana
+Sana	sana
+SaneDesk	sanedesk
+Sans Serif	sansserif
+SANYO	sanyo
+Sanyo	sanyo
+SAP	sap
+SARS	sars
+SaSa	sasa
+Sathu	sathu
+Sauce Code Pro	saucecodepro
+Savoye	savoye
+SAYA	saya
+Scala	scala
+Scapple	scapple
+SCI	sci
+SciTE	scite
+Scofield	scofield
+Scrapbook	scrapbook
+ScreenFloat	screenfloat
+ScreenFlow	screenflow
+Screens VNC	screensvnc
+Scrivener	scrivener
+SDK	sdk
+SDR	sdr
+SeaTable	seatable
+SecureCRT	securecrt
+SEGA	sega
+Semibold	semibold
+SEO	seo
+Seravek	seravek
+SFC	sfc
+SFMono	sfmono
+Shadowsocks	ss
+Shero	shero
+Shift	shift
+Shimano	shimano
+SHINee	shinee
+Shree	shree
+Sierra	sierra
+Sigil	sigil
+SignPainter	signpainter
+Silom	silom
+SIM	sim
+SimHei	simhei
+Simplenote	simplenote
+SimpleText	simpletext
+SimSimi	simsimi
+SimSun	simsun
+Single Tour	singletour
+Sinhala	sinhala
+Siri	siri
+Siri Remote	siriremote
+SISTAR	sistar
+Skia	skia
+SKINFOOD	skinfood
+Skrillex	skrillex
+Skyfall	skyfall
+Skype	skype
+Sleep Cycle	sleepcycle
+SLG	slg
+Slicy	slicy
+Slide Over	slideover
+Smart Connector	smartconnector
+Smart Cover	smartcover
+Smart Keyboard	smartkeyboard
+Smartisan	smartisan
+Smartisan OS	smartisan
+SMB	smb
+SMTP	smtp
+Snagit	snagit
+Snapselect	snapselect
+SnellRoundhand	snellroundhand
+Snidel	snidel
+SNK	snk
+SOCKS	socks
+SoDu	sodu
+Softimage	softimage
+Software Development Kit	sdk
+Soga	soga
+SOGO	sogo
+Sogou	sogou
+Sohu	sohu
+Solar Walk	solarwalk
+Soledad	soledad
+Sonos	sonos
+SONY	sony
+Sony	sony
+Sophia	sophia
+SOS	sos
+Soso	soso
+Source Insight	sourceinsight
+SourceHanSans	sourcehansans
+SourceTree	sourcetree
+Sparkbox	sparkbox
+Sparkey	sparkey
+SPDY	spdy
+Specialist	specialist
+Speedtest	speedtest
+Spendee	spendee
+SpeXial	spexial
+Splashtop	splashtop
+Split View	splitview
+Spotify	spotify
+Spotlight	spotlight
+Spss	spss
+Spyair	spyair
+SQL	sql
+SQL Server	sqlserver
+Squirrel	shuxuguan
+sRGB	srgb
+SRPG	srpg
+SSD	ssd
+SSH	ssh
+SSID	ssid
+SSLEdge	ssledge
+StackSocial	stacksocial
+Starbucks	starbucks
+Statistics	statistics
+Stephy	stephy
+Steve Jobs Theater	stevejobstheater
+STM	stm
+StockWatch	stockwatch
+Store	store
+Stussy	stussy
+Stylenanda	stylenanda
+Sublime Text	sublimetext
+SUKI	suki
+Super Potion	superpotion
+SuperClarendon	superclarendon
+Surface	surface
+Surge	surge
+Surge iOS	surgeios
+Surge Mac	surgemac
+SUV	suv
+SVCD	svcd
+Sweety	sweety
+Swift	swift
+Swift Playgrounds	swiftplaygrounds
+SwipeSelection	swipeselection
+Symbian	symbian
+Symbol	symbol
+Sync for Firefox	syncforfirefox
+Synology NAS	synologynas
+Tab	tab
+Tablo	tablo
+Tag	tag
+Tags	tags
+Tahoma	tahoma
+Taobao	taobao
+Taptic Engine	tapticengine
+Tata	tata
+TCL	tcl
+TCP	tcp
+TCP/IP	tcpip
+TeamViewer	teamviewer
+TechWeb	techweb
+TED	ted
+TeeVee	teevee
+Tegra	tegra
+Telegram	telegram
+Telnet	telnet
+Tencent	tencent
+Tenda	tenda
+TERA	tera
+TestFlight	testflight
+Texshop	texshop
+Textastic	textastic
+TextExpander	textexpander
+TextGrabber	textgrabber
+TextMate	textmate
+TextPad	textpad
+TextWrangler	textwrangler
+The SemWare Editor	thesemwareeditor
+The Unarchiver	theunarchiver
+Things	things
+ThinkPad	thinkpad
+Thunderbird	thunderbird
+Thunderbolt	thunderbolt
+Thunderbolt Bridge	thunderboltbridge
+Thunderbolt Ethernet	thunderboltethernet
+THX	thx
+TiAmo	tiamo
+Time Capsule	timecapsule
+Time Machine	timemachine
+Times New Roman	timesnewroman
+TimeZ	timez
+TiMi	timi
+TinkerTool	tinkertool
+TLF	tlf
+Tmall	tmall
+TMD	tmd
+TODO	todo
+TomBoy	tomboy
+TOPIK	topik
+Topshop	topshop
+TOTO	toto
+Touch ID	touchid
+TOUS	tous
+TP-LINK	tplink
+Trattatello	trattatello
+Trebuchet MS	trebuchetms
+Trello	trello
+True Tone	truetone
+TTL	ttl
+Tumblr	tumblr
+TUN	tun
+Tupac	tupac
+Turbo Boost	turboboost
+Tuxera Disk Manager	tuxera
+TVB	tvb
+tvOS	tvos
+TVout	tvout
+Tweetbot	tweetbot
+Twist Plus	twistplus
+Twitter	twitter
+TXT	txt
+Typany	typany
+Typora	typora
+UAP	uap
+Uber	uber
+UBI	ubi
+uBlock	ublock
+Ubuntu	ubuntu
+UCDOS	ucdos
+UDP	udp
+UFO	ufo
+UGG	ugg
+Ukiss	ukiss
+Ulike	ulike
+Ultra Ball	ultraball
+UltraEdit	ultraedit
+Ultralight	ultralight
+Ultrathin	ultrathin
+UMTS	umts
+UniFi	unifi
+UniFi Security Gateway	unifi
+UniFi Switch	unifi
+UNIQLO	uniqlo
+Unix	unix
+URL	url
+URL Scheme	urlscheme
+USA	usa
+USANA	usana
+USB	usb
+USB-A	usba
+USB-C	usbc
+USD	usd
+UTF-8	utfba
+UUcall	uucall
+V2EX	vtex
+VanDyke	vandyke
+VCD	vcd
+VDSL	vdsl
+Verdana	verdana
+Versions	versions
+Vesper	vesper
+VGA	vga
+VGS	vgs
+VHS	vhs
+Viber	viber
+Vics	vics
+Vim	vim
+Vimeo	vimeo
+VIP	vip
+Virtual PC	virtualpc
+VirtualBox	virtualbox
+Viscap	viscap
+Visio	visio
+VIXX	vixx
+VLC	vlc
+VMware	vmware
+VOA	voa
+VOBSUB	vobsub
+VOCALOID	vocaloid
+VOD	vod
+VoLTE	volte
+VOTO	voto
+VPN	vpn
+VPS	vps
+VVIP	vvip
+Waltr	waltr
+Warcraft	warcraft
+Warkey	warkey
+Warriors	warriors
+Waseem	waseem
+watchOS	watchos
+WCDMA	wcdma
+WEB	web
+Webdings	webdings
+WebRTC	webrtc
+WeChat	wechat
+Weibo	weibo
+WEP	wep
+Westlife	westlife
+WhatsApp	whatsapp
+Whispersync	whispersync
+WHO	who
+WiFi	wifi
+Wi-Fi	wifi
+WiFi Explorer	wifiexplorer
+WiFi Scanner	wifiscanner
+Wii	wii
+Wiki	wiki
+Wikipedia	wiki
+WIN	win
+Winamp	winamp
+Window Tidy	windowtidy
+Windows	windows
+Windows Live Mail	windowslivemail
+Windows Live Messenger	windowslivemessenger
+Windows Mobile	windowsmobile
+Windows Phone	windowsphone
+WINS	wins
+WinSCP	winscp
+Wireless Keyboard	wirelesskeyboard
+Withings Thermo	withingsthermo
+WLAN	wlan
+WLAN + Cellular	wlanjia
+WMA	wma
+WMP	wmp
+WORD	word
+Wordpress	wordpress
+WordStar	wordstar
+Workflow	workflow
+WorkFlowy	workflowy
+WORKGROUP	workgroup
+World of Warcraft	wow
+World Wide Web	www
+WPA	wpa
+WPA2	wpa
+WPS	wps
+WPS Office	wpsoffice
+Writer Pro	writerpro
+WTO	wto
+WWDC	wwdc
+WWYD	wwyd
+Xbmc	xbmc
+Xbox	xbox
+Xbox One	xboxone
+Xcode	xcode
+XcodeDigits	xcodedigits
+Xee	xee
+Xeon	xeon
+XMind	xmind
+Xoxoxo	xoxoxo
+Xperia	xperia
+X-Ray	xray
+xScope	xscope
+XtraFinder	xtrafinder
+XXOO	xxoo
+yEd	yed
+Yee	yee
+YONEX	yonex
+YotaPhone	yotaphone
+Youku	youku
+YouTube	youtube
+Yudit	yudit
+Yui	yui
+Yuki	yuki
+YULI	yuli
+Yumiko	yumiko
+Yummy FTP	yummyftp
+ZAKER	zaker
+Zakka	zakka
+Zapfino	zapfino
+ZEALER	zealer
+Zelo	zelo
+ZeroNet	zeronet
+Zhihu	zhihu
+ZIP	zip
+Zippo	zippo
+Zowie	zowie
+ZTE	zte
+Zynga	zynga
+π	pai
+ Music	applemusic
+ PAY	applepay
+ tv 4K	appletv
+ Watch	applewatch
+🇭🇰	hk	10002
+false	false
+FALSE	false
+true	true
+TRUE	true

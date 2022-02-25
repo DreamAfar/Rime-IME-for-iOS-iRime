@@ -3,10 +3,10 @@
 
 ---
 name: Qiao.extended
-version: "2020.12.30"
+version: "2021.8.24"
 sort: by_weight
-vocabulary: essay-zh-hans
-use_preset_vocabulary: true
+vocabulary: essay-zh-hans     #启用八股文简体字词汇表essay-zh-hans.txt，可用于简化字为主的输入方案。
+use_preset_vocabulary: true   #是否使用预设的词汇
 
 # clover.base 这是单字的字库，包含所有字的拼音、字频，对应文件 clover.base.dict.yaml
 # clover.phrase 这是词组的词库，包含所有基本词汇的拼音、词频，对应文件 clover.phrase.dict.yaml
@@ -16,10 +16,19 @@ use_preset_vocabulary: true
 # clover.base 是不可以删除的，否则四叶草方案会失去所有文字的拼音导致导入任何词库都无效。
 
 import_tables:
-  - pinyin_simp          #袖珍简体字词库
+  # - pinyin_simp          #袖珍简体字词库
+  # - pinyin_simp_8105          #袖珍简体字词库8105单字
+  - pinyin_8105_danzi          #8105单字
+  - pinyin_simp_cihui          #袖珍简体字词组
   # - placeless_punct
-  # - clover             #四叶草的单字字库
+  # - clover.base          #四叶草的单字字库
   # - clover.phrase        #四叶草的词组词库
+
+  # - sys_ext # 自己平时随手偶尔添加的词汇  会导致打字有问题
+  # - ext     # 偶尔整合的一些扩展词库  会导致打字有问题
+  - av      # 著名表演艺术家
+  
+  # 清华大学开源词库
   - THUOCL_animal        #动物相关词汇
   - THUOCL_caijing       #财经相关词汇
   - THUOCL_car           #车相关词汇
@@ -31,4 +40,8 @@ import_tables:
   - THUOCL_lishimingren  #历史名人词汇
   - THUOCL_medical       #医学词汇
   - THUOCL_poem          #诗歌词汇
+  # - zhwiki               #zhwiki词汇
+  - sogou_liuxing        #搜狗流行词汇
+  - Qiao_user           #个人词汇
+  
   # - sogou_new_words      #搜狗的词汇

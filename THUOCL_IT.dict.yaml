@@ -1,7 +1,9 @@
+# del 「自动登陆-zi dong deng lu-681」
+# del 「傅立叶变换」→「傅里叶变换」
 name: THUOCL_IT
 version: "1"
 sort: by_weight
-
+vocabulary: essay-zh-hans
 ...
 字符串	zi fu chuan	395499
 初始化	chu shi hua	372767
@@ -4046,7 +4048,6 @@ sort: by_weight
 装系统	zhuang xi tong	1424
 控件类	kong jian lei	1423
 模板库	mu ban ku	1423
-傅立叶变换	fu li ye bian huan	1422
 系统编程	xi tong bian cheng	1421
 八进制数字	ba jin zhi shu zi	1421
 分布式服务	fen bu shi fu wu	1421
@@ -5857,7 +5858,6 @@ sort: by_weight
 位段	wei duan	681
 最大团	zui da tuan	681
 日期计算	ri qi ji suan	681
-自动登陆	zi dong deng lu	681
 模拟点击	mo ni dian ji	680
 东软	dong ruan	679
 本地源	ben di yuan	679

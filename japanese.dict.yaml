@@ -7,10 +7,9 @@ version: 'v0.2-20180411'
 
 import_tables:
   - japanese.mozc
-  # - japanese.mozcx
   - japanese.jmdict
   - japanese.kana
-
-  # - japanese.poly
-  # - nihongo-r
+  - japanese.kanji
+  - japanese.kanji2
+  - japanese.poly
 ...

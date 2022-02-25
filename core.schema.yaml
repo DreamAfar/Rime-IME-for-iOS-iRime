@@ -33,6 +33,7 @@ engine:
     - punct_translator
     - reverse_lookup_translator
     - script_translator
+
   filters:
     - uniquifier
 
@@ -42,6 +43,8 @@ speller:
 
 translator:
   dictionary: core
+  prism: core
+
 
 punctuator:
   import_preset: default
