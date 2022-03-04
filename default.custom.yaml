@@ -13,7 +13,7 @@ patch:
     - {schema: japanese}
     # - {schema: easy_en}
     # - {schema: Qiao_pinyin}
-    # - {schema: sbxh}
+    - {schema: sbxh}
     # - {schema: pinyin_simp}
     # - {schema: xkjd6}
     # - {schema: double_pinyin_flypy}
